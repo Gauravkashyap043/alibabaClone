@@ -1,0 +1,142 @@
+footer{
+    width:100%;
+    margin:0;
+    padding:0;
+    border:1px solid red;
+    background-color:#445268;
+    font-family: sans-serif;
+    /* position: relative; */
+       
+}
+.footerCont{
+    /* border:1px solid black; */
+    width:80%;
+    margin:auto;
+    height:350px;
+    background-color:#445268;
+    border-bottom: 1px solid #313D51;;
+
+}
+.trade-alert{
+    /* border:1px solid black; */
+    width:50%;
+    margin:auto;
+    margin-top:10px;
+    text-align:center;
+    padding:5px 0px;
+    color:white;
+}
+.trade-alert input{
+    background-color: #313D51;
+    width:50%;
+    height:30px;
+    color:white;
+    border:1px solid white;
+}
+.trade-alert button{
+    height:35px;
+    background:transparent;
+    width:15%;
+    color:white;
+    border:1px solid white;
+}
+.about-alibaba {
+    width:98%;
+    padding:2%;
+    display:flex;
+    justify-content:space-between;
+}
+.about-alibaba ul h3{
+    padding:5px 0;
+    margin:0;
+    color:white;
+}
+.about-alibaba ul li{
+    list-style:none;
+    padding:3px 0;
+    font-size:14px;
+    
+}
+
+.about-alibaba ul li a{
+    text-decoration:none;
+    color:white;
+}
+.social{
+    width:100%;
+    /* height:200px; */
+    /* border:1px solid black; */
+    display:flex;
+    justify-content:space-evenly;
+    color:white;
+    background-color:#445268;
+}
+.social-app{
+    /* border:1px solid red; */
+    display: flex;
+    /* float:left; */
+    margin:5px;
+    padding:5px;
+}
+.social-app p{
+    margin:3px;
+    padding:0;
+
+}
+.social-app a img{
+    width:100px;
+    height:30px;
+    background-color:white;
+    margin-left:5px;
+}
+.supplier-app{
+    display:flex;
+    /* border:1px solid red; */
+    margin:5px;
+    padding:5px;
+}
+.supplier-app a img{
+    width:50px;
+    height:30px;
+    margin-left:5px;
+}
+.supplier-app p{
+    margin:3px;
+    padding:0;
+}
+.social-media{
+    /* border:1px solid red; */
+    display: flex;
+    margin:5px;
+    padding:5px;
+}
+#social-media-list{
+    /* float:left; */
+    display:flex;
+    margin:0;
+    padding:0;
+    /* background-color:white; */
+}
+.social-media p{
+    margin: 3px;
+    padding:0px;
+}
+#social-media-list li{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+#social-media-list li a img{
+    width:50px;
+    height:30px;
+    margin-left:5px;
+    /* background-color:white; */
+}
+.additional{
+    text-align:center;
+    color:white;
+    background-color:#445268;
+}
+.additional p{
+    font-size: 15px;
+}
