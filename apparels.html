@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #apparels{
+            display: block;
+            width: 80%;
+            margin: auto;
+            /* border: 1px solid red; */
+            /* background-color: ; */
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
+        }
+        #apparels_left{
+            width: 18%;
+            padding: 5px;
+           /* background-color: red; */
+           position: fixed;
+        }
+        .trend_overlay{
+            width: 100%;
+            padding: 5px;
+            margin: 5px 5px 5px 0px;
+            /* border: 0.5px solid red; */
+            /* position: relative; */
+        }
+        .trend_overlay:hover{
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
+        }
+        .trend_overlay:hover + .overleafy, .overleafy:hover{
+            display: flex;
+            flex-direction: column;
+            line-height: 10px;
+            height: fit-content;
+            top: 30px;
+            left: 27%;
+            padding: 10px;
+            background-color: blanchedalmond;
+            width: 210px;
+            z-index: 3;
+            position: fixed;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
+        } 
+        .overleafy{
+            display: none;
+        }
+        #apparel_rigth{
+            width: 75%;
+            display: grid;
+            grid-template-columns: repeat(4,22%);
+            margin-left: 25%;
+            background-color: white;
+            margin-top: 50px;
+            gap: 20px;
+            padding: 2%;
+            /* border: 1px solid green; */
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+        .zeal_box{
+            width: 180px;
+            /* z-index: -1; */
+            margin: 10px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
+        }
+    </style>
+</head>
+<body>
+    <div id="apparels">
+        <div id="apparels_left">
+            <div>Categories</div>
+            <div class="trend_overlay">Baby clothing</div>
+            <div class="overleafy">
+                
+                Baby bibs <br> <br>
+                Baby clothing sets <br> <br>
+                Baby dresses <br> <br>
+                Baby hoodies&sweatshirts <br> <br>
+                Baby jackets&outwears <br> <br>
+                Baby pants&shorts <br> <br>
+                Baby rompers <br> <br>
+                Baby shirts&tops <br> <br>
+                Baby skirts <br> <br>
+                Baby sleeping bags <br> <br>
+                Baby sweaters <br> <br>
+                Baby T-Shirts <br> <br>
+                Baby underwears <br> <br>
+                Baby vests&waistcoats<br> <br>
+            </div>
+            <div class="trend_overlay">Childern clothing</div>
+            <div class="overleafy">
+                <p>Boys Clothing</p>
+                <p>Family Matching Outfits</p>
+                <p>Girls Clothing</p>
+            </div>
+            <div class="trend_overlay">Ethinic clothing</div>
+            <div class="overleafy">
+                Africa Clothing<br><br>
+                 American Clothing<br><br> 
+                Asia & Pacific Islands Clothing <br><br>
+                European Clothing<br><br> 
+                India & Pakistan Clothing<br><br> 
+                Islamic Clothing<br><br> 
+                Other Regional Clothing<br><br> 
+                Traditional Chinese Clothing<br><br>
+            </div>
+            <div class="trend_overlay">Garments</div>
+            <div class="overleafy">
+                <p>Africa Clothing</p>
+                <p>American Clothing</p>
+                <p>Asia & Pacific Islands Clothing</p>
+                <p>European Clothing</p>
+                <p>India & Pakistan Clothing</p>
+                <p>Islamic Clothing</p>
+                <p>Other Regional Clothing</p>
+                <p>Traditional Chinese Clothing</p>
+            </div>
+            <div class="trend_overlay">Infant & Toddler</div>
+            <div class="overleafy">
+                <p>Africa Clothing</p>
+                <p>American Clothing</p>
+                <p>Asia & Pacific Islands Clothing</p>
+    
+            </div>
+            <div class="trend_overlay">Men's clothing</div>
+            <div class="overleafy">
+                Baby Swimwear(old) <br><br>
+                Other Baby Clothing(old) <br> <br>
+            </div>
+            <div class="trend_overlay">Novelty & Specials</div>
+            <div class="overleafy">
+                Men's Coats<br><br>
+                Men's Down Coat <br><br>
+                Men's Hoodies & Sweatshirts <br><br>
+                Men's Jackets <br><br>
+                Men's Jeans <br><br>
+                Men's Leggings <br><br>
+                Men's Pants & Trousers <br><br>
+                Men's Parkas <br><br>
+                Men's Polo Shirts <br><br>
+                Men's Sets
+                Men's Shirts <br><br>
+                Men's Shorts <br><br>
+                Men's Sleepwear <br><br>
+                Men's Suits & Blazer <br><br>
+                Men's Sweaters <br><br>
+                Men's T-Shirts <br><br>
+                Men's Tank Tops <br><br>
+                Men's Vests & Waistcoats <br><br>
+                Men's Underwear <br><br>
+                Plus Size Men's Clothing <br><br>
+            </div>
+            <div class="trend_overlay">Other Apparel</div>
+            <div class="overleafy">
+                <p>Africa Clothing</p>
+                <p>American Clothing</p>
+                <p>Asia & Pacific Islands Clothing</p>
+                <p>European Clothing</p>
+                <p>India & Pakistan Clothing</p>
+                <p>Islamic Clothing</p>
+                <p>Other Regional Clothing</p>
+                <p>Traditional Chinese Clothing</p>
+            </div>
+            <div class="trend_overlay">Socks & Housier</div>
+            <div class="overleafy">
+                <p>Africa Clothing</p>
+                <p>American Clothing</p>
+                <p>Asia & Pacific Islands Clothing</p>
+                <p>European Clothing</p>
+                <p>India & Pakistan Clothing</p>
+                <p>Islamic Clothing</p>
+                <p>Other Regional Clothing</p>
+                <p>Traditional Chinese Clothing</p>
+            </div>
+            <div class="trend_overlay">SportsWear</div>
+            <div class="overleafy">
+                Badges <br>   <br>
+                Boning   <br>   <br>
+                Braid <br>   <br>
+                Buckles <br>   <br>
+                Buttons <br>   <br>
+                Cords    <br>   <br>
+                Garment Beads <br>         <br>
+                Garment Clips  <br>   <br>
+                Garment Eyelets  <br>   <br>
+                Garment Hooks  <br>   <br>
+                Garment Labels  <br>   <br>
+                Garment Rivets  <br>   <br>
+                Garment Tags  <br>   <br>
+                Hook & Loop Tape  <br>   <br>
+                Interlinings & Linings  <br>    <br>
+                Knitting Rib <br>   <br>
+                Lace <br>   <br>
+                Mannequins<br>    <br>
+                Other Garment Accessories <br>   <br>
+            </div>
+            <div class="trend_overlay">Toddlers's Clothing</div>
+            <div class="overleafy">
+                <p>Africa Clothing</p>
+                <p>American Clothing</p>
+                <p>Asia & Pacific Islands Clothing</p>
+                <p>European Clothing</p>
+                <p>India & Pakistan Clothing</p>
+                <p>Islamic Clothing</p>
+                <p>Other Regional Clothing</p>
+                <p>Traditional Chinese Clothing</p>
+            </div>
+           </div>
+           <h1 style="margin-left: 27%;">Recommended for you</h1>
+           <div id="apparel_rigth">
+           
+        </div>
+    </div>
+
+</body>
+</html>
+
+
+<script>
+    var apparels = [
+    {
+    img_url: "https://s.alicdn.com/@sc02/kf/HTB15BWDOXzqK1RjSZFoq6zfcXXah.jpg_80x80xz.jpg",
+    text: "Women's clothing",
+    },{
+    img_url: "https://s.alicdn.com/@sc02/kf/HTB1WI2lQ7voK1RjSZPf760PKFXaf.png_80x80xz.jpg",
+    text: "Men's clothing",
+    },{
+    img_url: "https://s.alicdn.com/@sc02/kf/HTB1isuIOgHqK1RjSZJnq6zNLpXaz.jpg_80x80xz.jpg",
+    text: "Sport's wear",
+    },{
+    img_url: "https://s.alicdn.com/@sc02/kf/HTB1qIiwOmzqK1RjSZPxq6A4tVXam.jpg_80x80xz.jpg",
+    text: "Children's clothing",
+    },{
+    img_url: "https://s.alicdn.com/@sc02/kf/HTB1cimCOkvoK1RjSZPfq6xPKFXa5.jpg_80x80xz.jpg",
+    text: "Garments",
+    },{
+    img_url: "https://s.alicdn.com/@sc02/kf/HTB1yz5NOcfpK1RjSZFOq6y6nFXaj.jpg_80x80xz.jpg",
+    text: "Novelty & Special",
+    },{
+    img_url: "https://s.alicdn.com/@img/imgextra/i4/O1CN014ezbRF1xIPTRcpOl3_!!6000000006420-2-tps-84-80.png_80x80xz.jpg",
+    text: "Baby clothing",
+    },{
+    img_url: "https://s.alicdn.com/@img/imgextra/i4/O1CN01ljyw0V1g1bTCvykun_!!6000000004082-2-tps-80-80.png_80x80xz.jpg",
+    text: "Todlers's Clothing",
+    }
+    ];
+    var funda = [
+{
+ img:"https://s.alicdn.com/@sc04/kf/Hc560d406452e41e6902beb258c45349c6.jpg_220x220.jpg",
+ text:"2021 Baby Stroller Accessories-Footmuff Cold Weather Kids Sleeping Bag Water Repellent Car Seat Cover For Stroller & Push Chair",
+ price:"₹492.86",
+},{
+ img:"https://s.alicdn.com/@sc04/kf/H34899f77b37f4f4d9928861ffdd9c46fj.jpg_220x220.jpg",
+ text:"Famicheer Baby Feeding Apron Bibs With Sleeves For Weaning Waterproof",
+ price:"₹269.53",
+},{
+ img:"https://s.alicdn.com/@sc04/kf/Hc8d6b670439f45e88776fdb717ebf15ap.jpg_220x220.jpg",
+ text:"Best Selling Custom Printed Bibs Plastic Custom Baby Bibs Disposable Waterproof Bibs",
+ price:"₹393",
+
+},{
+ img:"https://s.alicdn.com/@sc04/kf/H2b34409f61974c31a733f15e016c2524G.jpg_220x220.jpg",
+ text:"Natucare BSCI children custom waterproof baby long sleeved apron bibs white",
+ price:"₹293.53",
+},
+{
+ img:"https://s.alicdn.com/@sc04/kf/Ha7fe53c6379f49a3beca59997b2148a9p.jpg_220x220.jpg",
+ text:"Stunning Purple Dubai Arabic Evening Dresses Beaded Long Sleeve Moroccan Kaftan",
+ price:"₹1623.24",
+},{
+ img:"https://s.alicdn.com/@sc04/kf/H414ac827bcd14dc88d9e5a126f8c4256H.jpg_220x220.jpg",
+ text:"2020 Summer Women Casual Plus Size Dress Maxi Abaya islamic clothing",
+ price:"₹677.68",
+},{
+ img:"https://s.alicdn.com/@sc04/kf/H7fc92335f35c44b68affe9eb8c025954z.jpg_220x220.jpg",
+ text:"Wholesale Muslim Women Dress Pink Turkish Long Dress Islamic Women Dubai Abaya",
+ price:"₹997.26",
+
+},{
+ img:"https://s.alicdn.com/@sc04/kf/H2b28e95ac4bf4faf8ff3532eb82f0509Y.jpg_220x220.jpg",
+ text:"wholesale good quality dubai daffah thawb muslim khamis thawb",
+ price:"₹716.18",
+},
+{
+ img:"https://s.alicdn.com/@sc04/kf/H5fc5ac0a31a9477abbc40859c21c9aa5z.jpg_220x220.jpg",
+ text:"Sofa Elastic webbing",
+ price:"₹38.51",
+},{
+ img:"https://s.alicdn.com/@sc04/kf/HTB1LkKDgS7PL1JjSZFHq6AciXXaF.jpg_220x220.jpg",
+ text:"Manual KAM garment snap button for DK93 or DK98 hand Machine",
+ price:"₹2,310.25",
+},{
+ img:"https://s.alicdn.com/@sc04/kf/HTB1Hz.gc56guuRjy0Fmq6y0DXXaE.jpg_220x220.jpg",
+ text:"China manufacturer wholesale customized metal various suspender clips",
+ price:"₹7.71",
+
+},{
+ img:"https://s.alicdn.com/@sc04/kf/H325ff3433c544f59b5c87175fda32427T.jpg_220x220.jpg",
+ text:"Cheap Custom Your Own Logo Gun Pvc Patch Rubber Soft Pvc Patch with Factory Price",
+ price:"₹53.14",
+},
+{
+ img:"https://s.alicdn.com/@sc04/kf/H93a30914870c4be28a4dace0c20d499fE.jpg_220x220.jpg",
+ text:"Hot Popular Unique Design OEM Custom Tie Dye shirts Round Neck Long Sleeve 100% Cotton Autumn Casual T Shirt For Men",
+ price:"₹1,155.13",
+},{
+ img:"https://s.alicdn.com/@sc04/kf/Hb67397d5404c4a789944d58a06e0d8aaZ.jpg_220x220.jpg",
+ text:"Wholesale custom logo design 100% cotton polo t-shirt golf formal business polo shirt for men",
+ price:"₹284.17",
+},{
+ img:"https://s.alicdn.com/@sc04/kf/HTB1bkAYcfBj_uVjSZFpq6A0SXXam.jpg_220x220.jpg",
+ text:"Stunning 3D effect artwork T-shirt,sort TPU patches,100% cotton,custom design",
+ price:"₹57.76",
+
+},{
+ img:"https://s.alicdn.com/@sc04/kf/H27cf00c033a34dfabb5b1867d576ca49M.jpg_220x220.jpg",
+ text:"Low MOQ for OEM ODM Chenille Bear Patch Unisex Chenille Patch Custom Chenille Hoodie",
+ price:"₹1,193.63",
+},
+{
+ img:"https://s.alicdn.com/@sc04/kf/H06c9fe631ddd4aeba52374022d8354a4T.jpg_220x220.jpg",
+ text:"Latest design solid color plain 100% cotton men casual full face zip hoodie7 buyers",
+ price:"₹1,386.15",
+},{
+ img:"https://s.alicdn.com/@sc04/kf/H2f66c881dda947078dc893b28a836fecp.jpg_220x220.jpg",
+ text:"Hot sales jacket for man light weight outdoor winter padded man jackets",
+ price:"₹419.70",
+},{
+ img:"https://s.alicdn.com/@sc04/kf/U7487306d64cb42d68d426a42bfa8abd2l.png_220x220.png",
+ text:"New Men's Jeans 2021 Casual Wear Best Quality Jeans Fashion Design Solid Skinny Ripped Denim Jeans",
+ price:"₹566.55",
+
+},{
+ img:"https://s.alicdn.com/@sc04/kf/U217021c296cf4723ae35d96a89306f13I.jpg_220x220.jpg",
+ text:"Custom Made Hoodie | Plain Hoodies",
+ price:"₹23.11",
+}
+]
+    let dav = document.getElementById("apparel_rigth");
+
+    funda.forEach(({img,text,price}) => {
+        let div = document.createElement("div");
+
+        let p1 = document.createElement("p");
+        let t1 = "";
+        for(i=0;i<15;i++){
+            t1 += text[i];
+        }
+        if(text.length >15){
+            p1.innerHTML = `<a href="#">${t1}..<b>Read more</b></a>`
+        }else{
+            p1.innerHTML = `<a href="#">${text}</a>`;
+        }
+        // p1.innerHTML = `<a href="#">${text}</a>`;
+        let image = document.createElement("img");
+        image.src = `${img}`;
+        image.style.width = "100%";
+        image.style.height = "150px"
+        let p2 = document.createElement("p");
+        p2.innerHTML = `<a href="#">${price}</a>`;
+
+        div.append(image,p1,p2);
+        // div.style.width = "120px";
+        div.setAttribute("class","zeal_box")
+        div.addEventListener("click",function(params){
+            let obj = {
+                img_tag : img,
+                text_tag: text,
+                price_tag:price
+            }
+            localStorage.setItem("details_prod",JSON.stringify(obj));
+            window.location.href = "./apparelprod.html";
+        })
+        dav.append(div);
+    });
+
+</script>

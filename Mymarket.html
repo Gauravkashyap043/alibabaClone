@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        body{
+        background:#fff;
+        font-family: sans-serif;
+        font-weight: 400;
+        }
+        #slider{
+        width: 95%;
+        padding-top: 12px;
+        margin:10px 0px 10px 20px;
+        
+        position:relative;
+        overflow:hidden;
+        }
+        #section_third{
+            display: flex;
+            width: 20%;
+            padding-top: 20px;
+            margin: 0px;
+            
+            flex-direction: column;
+
+        }
+        #section_third > div:nth-child(1){
+            height: 20px;
+            margin-bottom: 20px;
+        }
+        #section_third > div,span{
+            height: 45px;
+            padding: 10px;
+            justify-content: space-between;
+        }
+        #section_third > span > img{
+            width: 25px;
+            height: 35px;
+        }
+        .slide{
+        width:100%;
+        height: 350px;
+        display:none;
+        animation-name:fade;
+        animation-duration: 0.05s;
+        
+        }
+        #slider > img{
+        width:100%;
+        height: 100%;
+        }
+        @keyframes fade{
+        from{opacity:0.5;}
+        to{opacity:1;}
+        }
+
+        .controls{
+        position:absolute;
+        top:50%;
+        transform:translateY(-50%);
+        font-size:1.5em;
+        padding:15px 10px;
+        border-radius:5px;
+        
+        }
+
+        .controls:hover{
+        background:white;
+        transition:0.2s;
+        }
+
+        .controls:active{
+        color:grey;
+        }
+
+        #left-arrow{
+        left:10px;
+        }
+
+        #right-arrow{
+        right:10px;
+        }
+
+        #dots-con{
+        
+        text-align:center;
+        }
+        .dot{
+        display:inline-block;
+        background:grey;
+        padding: 4px;
+        height: 4px;
+        border-radius:50%;
+        margin:10px 5px;
+        }
+
+        .active{
+        background:crimson;
+        }
+
+        @media (max-width:576px){
+        #slider{
+            width:100%;
+        
+        }
+        
+        .controls{
+            font-size:0.25em;
+        }
+        
+        #dots-con{
+            display:none;
+        }
+        }
+        .vv{
+            display: flex;
+            flex-direction: row;
+        }
+        .x_hov{
+            display: flex;
+            padding: 8px;
+            height: 42px;
+            width: 100%;
+            border-bottom: 0.6px solid gray;
+            text-align: center;
+            gap: 10px;
+            /* border: 1px solid black; */
+        }
+        .x_hov:hover + .leaf, .leaf:hover{
+            display: grid;
+            grid-template-columns: repeat(4,23%);
+            gap: 3%;
+            width: 700px;
+            position: fixed;
+            /* overflow: hidden; */
+            padding: 10px;
+            font-size: 0.88em;
+            top: 20px;
+            flex-flow: row-reverse;
+            z-index: 3;
+            background-color: white;
+            margin: 5px 5px 20px 240px;
+            /* border: 1px solid red; */
+            color: black;
+            transition: 1s;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
+        }
+        .leaf{
+            display: none;
+        }
+        #transit_slide{
+            display: flex;
+            margin: auto;
+            /* border:  1px solid red; */
+            flex-wrap: nowrap;
+            font-size: .80em;
+            width: 90%;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;;
+        }
+        #category_div{
+            /* border:  1px solid red; */
+            width: 20%;
+        }
+        #pre_slider{
+            /* border: 1px solid red; */
+            width: 60%;
+        }
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div id="transit_slide">
+    <div id="category_div">
+        <div style="margin-left: 25px;padding: 8px;"><h3>My Market</h3></div>
+        <div class="vv">
+            <div class="x_hov">
+                <div>
+                    <img src="https://sc02.alicdn.com/kf/HTB12RuNUmzqK1RjSZFH7623CpXa6.png_50x50xz.jpg" alt="">
+                </div>
+                <div>
+                    <p><a href="#">Consumer Electronics</a></p>
+                </div>
+            </div>
+            <div class="leaf">
+                <div>
+                <h3><a href="#">Camera, Photo & Accessories</a></h3>
+                <p><a href="#">Action & Sports Camera</a></p>
+                <p><a href="#">Action & Sports Camera Accessory</a></p>
+                <p><a href="#">Baby & Pet Monitor</a></p>
+                <p><a href="#">Backgrounds</a></p>
+                <p><a href="#">Battery Grip</a></p>
+                <p><a href="#">Camera Filters</a></p>
+                </div>
+                <div>
+                <h3><a href="#">Chargers, Batteries & Power Supply</a></h3>
+                <p><a href="#">Action & Sports Camera</a></p>
+                <p><a href="#">Action & Sports Camera Accessory</a></p>
+                <p><a href="#">Baby & Pet Monitor</a></p>
+                <p><a href="#">Backgrounds</a></p>
+                <p><a href="#">Battery Grip</a></p>
+                <p><a href="#">Camera Filters</a></p>
+                </div>
+                <div>
+                <h3><a href="#">Commonly Used Accessories & Parts</a></h3>
+                <p><a href="#">Action & Sports Camera</a></p>
+                <p><a href="#">Action & Sports Camera Accessory</a></p>
+                <p><a href="#">Baby & Pet Monitor</a></p>
+                <p><a href="#">Backgrounds</a></p>
+                <p><a href="#">Battery Grip</a></p>
+                <p><a href="#">Camera Filters</a></p>
+                </div>
+                <div>
+                <h3><a href="#">Computer Hardware & Software</a></h3>
+                <p><a href="#">Action & Sports Camera</a></p>
+                <p><a href="#">Action & Sports Camera Accessory</a></p>
+                <p><a href="#">Baby & Pet Monitor</a></p>
+                <p><a href="#">Backgrounds</a></p>
+                <p><a href="#">Battery Grip</a></p>
+                <p><a href="#">Camera Filters</a></p>
+                </div>
+                <div>
+                <h3><a href="#">Electronic Cigarettes</a></h3>
+                <p><a href="#">Action & Sports Camera</a></p>
+                <p><a href="#">Action & Sports Camera Accessory</a></p>
+                <p><a href="#">Baby & Pet Monitor</a></p>
+                <p><a href="#">Backgrounds</a></p>
+                <p><a href="#">Battery Grip</a></p>
+                <p><a href="#">Camera Filters</a></p>
+                </div>
+                <div>
+                <h3><a href="#">Earphone & Headphone & Accessories</a></h3>
+                <p><a href="#">Action & Sports Camera</a></p>
+                <p><a href="#">Action & Sports Camera Accessory</a></p>
+                <p><a href="#">Baby & Pet Monitor</a></p>
+                <p><a href="#">Backgrounds</a></p>
+                <p><a href="#">Battery Grip</a></p>
+                <p><a href="#">Camera Filters</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="vv">
+            <div class="x_hov">
+                <div>
+                    <img src="https://sc02.alicdn.com/kf/HTB1gUuPUkzoK1RjSZFl761i4VXaw.png_50x50xz.jpg" alt="">
+                </div>
+                <div>
+                    <p><a href="#">Apparel</a></p>
+                </div>
+            </div>
+            <div class="leaf">
+                <div>
+                <h3>Baby Clothing</h3>
+                <p>Baby bibs</p>
+                <p>Baby clothing sets</p>
+                <p>Baby dresses</p>
+                <p>Baby hoodies&sweatshirts</p>
+                <p>Baby jackets&outwears</p>
+                <p>Baby pants&shorts</p>
+                </div>
+                <div>
+                <h3>Ethnic Clothing</h3>
+                <p>Africa Clothing</p>
+                <p>American Clothing</p>
+                <p>Asia & Pacific Islands Clothing</p>
+                <p>European Clothing</p>
+                <p>India & Pakistan Clothing</p>
+                <p>Islamic Clothing</p>
+                </div>
+                <div>
+                <h3>Garment & Processing Accessories</h3>
+                <p>Badges</p>
+                <p>Boning</p>
+                <p>Braid</p>
+                <p>Buckles</p>
+                <p>Buttons</p>
+                <p>Cords</p>
+                </div>
+                <div>
+                <h3>Men's Clothing</h3>
+                <p>Men's Coats</p>
+                <p>Men's Down Coat</p>
+                <p>Men's Hoodies & Sweatshirts</p>
+                <p>Men's Jackets</p>
+                <p>Men's Jeans</p>
+                <p>Men's Leggings</p>
+                </div>
+                <div>
+                <h3>Childrens Clothing</h3>
+                <p>Boys Clothing</p>
+                <p>Family Matching Outfits</p>
+                <p>Girls Clothing</p>
+                </div>
+                <div>
+                <h3>Infant & Toddlers Clothing(old)</h3>
+                <p>Baby Swimwear(old)</p>
+                <p>Other Baby Clothing(old)</p>
+                </div>
+            </div>
+        </div>
+        <div class="vv">
+            <div class="x_hov">
+                <div>
+                    <img src="https://sc02.alicdn.com/kf/HTB1JdWLUhTpK1RjSZR0762EwXXa6.png_50x50xz.jpg" alt="">
+                </div>
+                <div>
+                    <p><a href="#">Vechile & Acessories</a></p>
+                </div>
+            </div>
+            <div class="leaf">
+                <div>
+                <h3>Automotive Parts & Accessories</h3>
+                <p>Air Conditioning Systems</p>
+                <p>Auto Body Systems</p>
+                <p>Auto Brake Systems</p>
+                <p>Auto Drive Systems</p>
+                <p>Auto Electrical Systems</p>
+                <p>Auto Electronics</p>
+                </div>
+                <div>
+                <h3>Aviation Parts & Accessories</h3>
+                <p>Aviation Accessories</p>
+                <p>Aviation Parts</p>
+                </div>
+                <div>
+                <h3>ATV/UTV Parts & Accessories</h3>
+                </div>
+                <div>
+                <h3>Container Parts & Accessories</h3>
+                </div>
+                <div>
+                <h3>Go Kart & Kart Racer Parts & Accessories</h3>
+                </div>
+                <div>
+                <h3>Amusement Park</h3>
+                <p>Amusement Park Rides</p>
+                <p>Animatronic Model</p>
+                <p>Climbing Walls</p>
+                <p>Other Amusement Park Products</p>
+                <p>Playground</p>
+                <p>Sensory Training Equipments</p>
+                </div>
+            </div>
+        </div>
+        <div class="vv">
+            <div class="x_hov">
+                <div>
+                    <img src="https://sc02.alicdn.com/kf/HTB1AkuTUgHqK1RjSZJn762NLpXa2.png_50x50xz.jpg" alt="">
+                </div>
+                <div>
+                    <p><a href="#">Sports and Entertainment</a></p>
+                </div>
+            </div>
+            <div class="leaf">
+                <div>
+                    <h3>Amusement Park</h3>
+                    <p>Amusement Park Rides</p>
+                    <p>Animatronic Model</p>
+                    <p>Climbing Walls</p>
+                    <p>Other Amusement Park Products</p>
+                    <p>Playground</p>
+                    <p>Sensory Training Equipments</p>
+                </div>
+                <div>
+                <h3>Boats & Ships</h3><p>Barge</p>
+                <p>Cabin Cruiser</p>
+                <p>Cargo Ship</p>
+                <p>Fishing Vessel</p>
+                <p>Other Boats</p>
+                <p>Parts & Accessories</p>
+                </div>
+                <div>
+                <h3>Fitness & Body Building</h3>
+                <p>Balance Training</p>
+                <p> Boxing</p>
+                <p>Cardio Training</p>
+                <p>Fitness Accessories</p>
+                <p>Martial Arts</p>
+                <p>Outdoor Fitness Equipment</p>
+                </div>
+                <div>
+                <h3>Cycling</h3>
+                <p>Bicycle</p>
+                <p>Bicycle Accessories</p>
+                <p>Bicycle Parts</p>
+                <p>Electric Bicycle</p>
+                <p>Electric Bicycle Part</p>
+                </div>
+                <div>
+                <h3>Exercise Rehabilitation</h3>
+                <p>Ice Relaxing</p>
+                <p>Other Exercise Rehabilitation</p>
+                <p>Sleep Helping</p>
+                <p>Sport Massagers</p>
+                <p>Stretching Training</p>
+                <p></p>
+                </div>
+                <div>
+                <h3>Artificial Grass & Sports Flooring</h3>
+                </div>
+            </div>
+        </div>
+        <div class="vv">
+            <div class="x_hov">
+                <div>
+                    <img src="https://sc02.alicdn.com/kf/H5e92ef24edc94162b72c331cbd6fbe6fn.png_50x50xz.jpg" alt="">
+                </div>
+                <div>
+                    <p><a href="#">Machinery</a></p>
+                </div>
+            </div>
+            <div class="leaf">
+                <div>
+                <h3>Agricultural Machinery & Equipment</h3>
+                <p>Agricultural Machinery Parts</p>
+                <p>Agricultural Sprayer</p>
+                <p>Animal & Poultry Husbandry Equipment</p>
+                <p>Aquaculture Machine Aerators</p>
+                <p>Balers</p>
+                <p>Biomass Briquette Machines</p>
+                </div>
+                <div>
+                <h3>Apparel & Textile Machinery</h3>
+                <p>Apparel & Textile Machinery Parts</p>
+                <p>Apparel Machinery</p>
+                <p>Cap Making Machines</p>
+                <p>Glove Making Machines</p>
+                <p></p>
+                <p></p>
+                </div>
+                <div>
+                <h3>Home Textile Product Machinery</h3>
+                <p>Ironing & Washing Equipments</p>
+                <p>Building Material Machinery</p>
+                <p> Board Making Machinery</p>
+                <p>Brick Making Machinery</p>
+                <p> Building Material Making Machinery Parts</p>
+                <p></p>
+                </div>
+                <div>
+                <h3>Cement Making Machinery</h3>
+                <p>Dry Mortar Machines</p>
+                <p>Duct Making Machines</p>
+                <p>Duct Making Machines</p>
+                <p>Cleaning Equipment</p>
+                <p>Air Cleaning Equipment</p>
+                <p>Cleaning Equipment Parts</p>
+                </div>
+                <div>
+                <h3>Corner Cleaning Machines</h3>
+                <p>Disinfecting Equipment</p>
+                <p>Filtration Equipment</p>
+                <p>Floor Sweeper</p>
+                <p>Pharmaceutical Machinery</p>
+                <p></p>
+                <p></p>
+                </div>
+                <div>
+                <h3>Chemical & Pharmaceutical Machinery</h3>
+                <p>Chemical Machinery & Equipment</p>
+                <p>Cosmetics Production Equipment</p>
+                <p>Crystallizer</p>
+                <p></p>
+                <p></p>
+                <p></p>
+                </div>
+            </div>
+        </div>
+        <div class="vv">
+            <div class="x_hov">
+                <div>
+                    <img src="https://sc02.alicdn.com/kf/HTB1RxCkXHys3KVjSZFn760FzpXaP.png_50x50xz.jpg" alt="">
+                </div>
+                <div>
+                    <p><a href="#">Home & Garden</a></p>
+                </div>
+            </div>
+            <div class="leaf">
+                <div>
+                <h3>Baby Supplies & Products</h3>
+                <p>Baby Car Seats</p>
+                <p>Baby Feeding & Nursing</p>
+                <p>Bath & Potty</p>
+                <p>Gear & Activity</p>
+                <p>Other Baby Supplies</p>
+                <p>Safety</p>
+                </div>
+                <div>
+                <h3>Bathroom Products</h3>
+                <p>Basins</p>
+                <p>Bath Mats</p>
+                <p>Bath Pillows</p>
+                <p>Bathroom Sets</p>
+                <p>Other Bath & Toilet Supplies</p>
+                <p>Shower Caps</p>
+                </div>
+                <div>
+                <h3>Garden Supplies</h3>
+                <p>BBQ</p>
+                <p>Garden Buildings</p>
+                <p>Garden Gloves & Protective Gear</p>
+                <p>Garden Hand Tools</p>
+                <p>Garden Landscaping & Decking</p>
+                <p>Hangers</p>
+                </div>
+                <div>
+                <h3>Garden Pots & Planters</h3>
+                <p>Home Decor</p>
+                <p>Artificial Plants and Flowers</p>
+                <p>Blinds, Shades & Shutters</p>
+                <p>Candles & Home Fragrance</p>
+                <p>Clocks</p>
+                <p> Garage Shelves</p>
+                </div>
+                <div>
+                <h3>Household Cleaning Tools & Accessories</h3>
+                <p>Aprons</p>
+                <p>Brooms & Dustpans</p>
+                <p>Buckets</p>
+                <p>Cleaning Brushes</p>
+                <p>Cleaning Cloths</p>
+                <p>Dusters</p>
+                </div>
+                <div>
+                <h3>Curtain Poles, Tracks & Accessories</h3>
+                <p>Decorative Accents</p>
+                <p>Home Storage & Organization</p>
+                <p>Closet Storage & Organization</p>
+                <p>Clothes Stands & Shoe Racks</p>
+                <p>Drawers & Cabinet Organizers</p>
+                <p>Drawers & Carts</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="pre_slider">
+    <div id="slider">  
+        <div class="slide" style="background:dodgerBlue;">
+          <img src="https://s.alicdn.com/@img/imgextra/i2/O1CN01eXeSMT1l2aPA9Ttlm_!!6000000004761-0-tps-990-400.jpg" >
+        </div>
+        
+        <div class="slide" style="background:coral;">
+           <img src="https://s.alicdn.com/@img/imgextra/i2/O1CN012SqPNB1zQJVmnWFFM_!!6000000006708-2-tps-990-400.png" >
+        </div>
+       
+        <div class="slide" style="background:crimson;">
+          <img src="https://s.alicdn.com/@img/imgextra/i1/O1CN01LzjTLA1S3yuTQPOiw_!!6000000002192-0-tps-990-400.jpg" >
+        </div>
+        
+        <div class="slide" style="background: #6edf10;">
+          <img src="https://s.alicdn.com/@img/imgextra/i2/O1CN010iiONd1JZHQSvFqHS_!!6000000001042-2-tps-990-400.png" >
+        </div>
+        <div class="slide" style="background:dodgerBlue;">
+          <img src="https://s.alicdn.com/@img/imgextra/i1/O1CN01QbCidY28PhYUeWbkR_!!6000000007925-0-tps-990-400.jpg" >
+        </div>
+        
+        <div class="slide" style="background:coral;">
+           <img src="https://s.alicdn.com/@img/imgextra/i4/O1CN01krfqwf1iMKd8vjE9F_!!6000000004398-2-tps-990-400.png" >
+        </div>
+       
+        <div class="slide" style="background:crimson;">
+          <img src="https://s.alicdn.com/@img/imgextra/i4/O1CN01kue83G1Eei3KE55t2_!!6000000000377-2-tps-990-400.png" >
+        </div>
+        
+        <!--Controlling arrows-->
+        <span class="controls" onclick="prevSlide(-1)" id="left-arrow"><i class="fa fa-arrow-left" aria-hidden="true"></i>
+      </span>
+        <span class="controls" id="right-arrow" onclick="nextSlide(1)"><i class="fa fa-arrow-right" aria-hidden="true"></i>
+      </span>
+      </div>
+        <div id="dots-con">
+       <span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+       <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+       </div>
+    </div>
+       <!-- sliding zone bhaisaheb   -->
+
+       <div id="section_third">
+           <div style="background-color: rgb(253, 56, 7);"><b>New and trending design</b></div>
+           <span style="display: flex;margin: 4px;"><b>New and trending designs</b>
+           <img src="https://s.alicdn.com/@img/imgextra/i3/O1CN019O7aLh1vuJ16rLQeQ_!!6000000006232-0-tps-350-350.jpg_100x100.jpg" alt="">
+        </span>
+           <span style="display: flex;margin: 4px;"><b>Alibaba.com Features</b>
+           <img src="https://s.alicdn.com/@img/imgextra/i2/O1CN01HHvMGg1xmBDtLS5RQ_!!6000000006485-2-tps-350-350.png_100x100.jpg" alt="">
+        </span>
+        <span style="display: flex;margin: 4px;"><b>Hot picks and trending design</b>
+            <img src="https://s.alicdn.com/@img/imgextra/i2/O1CN019EHLbh1Y0DLdLwvE9_!!6000000002996-2-tps-350-350.png_100x100.jpg" alt="">
+         </span>
+       </div>
+       
+    </body>
+    </html>
+    
+
+
+<script>
+
+var slides = document.querySelectorAll(".slide");
+var dots = document.querySelectorAll(".dot");
+var index = 0;
+
+
+function prevSlide(n){
+  index+=n;
+  console.log("prevSlide is called");
+  changeSlide();
+}
+
+function nextSlide(n){
+  index+=n;
+  changeSlide();
+}
+
+
+changeSlide();
+var x  = setInterval((el) => {
+    nextSlide(1);
+}, 3000);
+
+function changeSlide(){
+    
+  if(index>slides.length-1)
+    index=0;
+  
+  if(index<0)
+    index=slides.length-1;
+  
+  
+  
+    for(let i=0;i<slides.length;i++){
+      slides[i].style.display = "none";
+      
+      dots[i].classList.remove("active");
+      
+      
+    }
+    
+    slides[index].style.display = "block";
+    dots[index].classList.add("active");
+
+  
+
+}
+
+
+
+</script>

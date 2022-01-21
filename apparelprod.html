@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .basic{
+            display: flex;
+            height: 500px;
+            border: 1px solid red;
+        }
+        #zammer{
+            width: 80%;
+            height: max-content;
+            margin: auto;
+        }
+        #zammer > div{
+            height: 50px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
+        }
+        .sub_basic{
+            height: 100%;
+            padding: 15px;
+        }
+
+        .basic > div:nth-child(1)> img{
+            height: 100%;
+            width: 100%;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="zammer">
+        <div><b>Note:</b> Please be cautious and check with your supplier if this product is for virus protection purposes and if the coronavirus (COVID-19) will affect your order.</div>
+    </div>
+</body>
+</html>
+
+<script>
+    let dav =document.getElementById("zammer");
+let detail = JSON.parse(localStorage.getItem("details_prod"))||[];
+    
+    let div1 =document.createElement("div");
+
+    let img = document.createElement("img");
+    img.src = detail.img_tag;
+    // img.style.width = "400px";
+    // img.style.height ="400px";
+    div1.append(img);
+    let div2 =document.createElement("div");
+    let p1 = document.createElement('p');
+    p1.innerHTML = `${detail.text_tag}<hr>`;
+    let p2 = document.createElement('p');
+    p2.innerHTML = `${detail.price_tag} /Pieces </hr>`;
+    let p3 = document.createElement('p');
+    p3.innerText = "Benifts         $3000 Apply Now>";
+    let p4 = document.createElement('p');
+    p4.innerText = "Custamization   customized logo";
+     div2.append(p1,p2,p3,p4);
+     div2.setAttribute("class","sub_basic")
+    let div3 =document.createElement("div");
+    div3.append(div1,div2);
+    div3.setAttribute("class","basic")
+    dav.append(div3)
+</script>
