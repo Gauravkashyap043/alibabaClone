@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/683b4b40e3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style/openproduct.css">
+</head>
+
+<body>
+    <div id="displayProductdiv">
+        <div id="productImage">
+            <img src="" alt="">
+
+            <div id="multiImage">
+            </div>
+        </div>
+
+        <div id="productdesc">
+            <div id="readytoship">
+                <p>Ready to Ship</p>
+                <p><i class="far fa-check-circle"></i> In Stock <i class="far fa-check-circle"></i> Fast Dispatch</p>
+            </div>
+
+            <p id="title">
+
+            </p>
+
+            <hr>
+
+            <p id="price">
+
+            </p>
+
+            <hr>
+
+            <div id="qtyDiv">
+                <label for="">Quantity : </label>
+                <div onclick="decQty()">
+                    <p>-</p>
+                </div>
+                <input type="number">
+                <div onclick="incQty()">
+                    <p>+</p>
+                </div>
+                <span>
+                    pieces
+                </span>
+            </div>
+        </div>
+
+
+        <div id="pricedetail">
+            <div id='item-total-price'>
+                <p id="pieces"></p>
+                <p id="item-amount"></p>
+            </div>
+            <span>Processing Time 3 days</span>
+
+            <hr>
+
+            <div id='shipping-total-price'>
+                <p>Shipping</p>
+                <p>₹11,700.63</p>
+            </div>
+
+            <hr>
+
+            <div id='total-price'>
+                <p>Total</p>
+                <p id="showtotal"></p>
+            </div>
+
+            <button>Start Order</button>
+            <button><i class="far fa-envelope"></i> Contact Supplier</button>
+            <button><i class="fas fa-shopping-cart"></i> Add to cart</button>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="./script/openproduct.js"></script>
