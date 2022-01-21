@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+</head>
+
+<style>
+    body{
+        background-color: whitesmoke;
+    }
+    .trade_contract_main_payment_page{
+        width:85%;
+        /* border: 1px solid; */
+        background-color: transparent;
+        margin: auto;
+    }
+    .trade_assurance_div{
+        padding: 10px;
+    }
+    .trade_assurance_main{
+        display: flex;
+    }
+    .trade_title>span:first-child{
+        font-weight: bold;
+    }
+    .trade_intro_subject_line{
+        border:1px solid gray;
+        width: 73%;
+        height: 0;
+        background-color: gray;
+        margin-top: 10px;
+        border-radius: 5px;
+    }
+    .page_main_layout{
+        display: flex;
+        justify-content: space-around;
+    }
+    .left_page_layout{
+        /* border: 1px solid yellow; */
+        width: 64%;
+    }
+    .right_page_layout{
+        /* border: 1px solid green; */
+        width:32%;
+    }
+    .shipping_address_div{
+        background-color: white;
+        border-radius: 5px;
+        padding-left: 10px;
+        padding-top: 10px;
+        margin-bottom: 20px;
+    }
+    .address>input{
+        margin-left: 4px;
+        margin-bottom: 15px;
+        border:1px dashed gray;
+        width:98%;
+        height: 50px;
+        text-align: center;
+    }
+    .product_block{
+        /* border:1px solid red; */
+        background-color: white;
+        border-radius: 5px;
+        height:60%;
+        margin-bottom: 15px;
+    }
+    .shipping_block{
+        padding:15px;
+        background-color: white;
+        border-radius: 5px;
+        margin-bottom: 15px;
+    }
+    .shipping_block_header{
+        border-radius: 5px;
+        display: flex;
+    }
+    .shipping_block_header>div>span:last-child{
+        font-size: small;
+    }
+    .shipping_block_1{
+        border: 1px solid lightgray;
+        height:0;
+        background-color: gray;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .shipping_method1{
+        margin-top: 5px;
+        display: flex;
+        padding:10px;
+    }
+    .shipping_method1>div:first-child{
+        width:30%;
+    }
+    .shipping_method1>div:last-child{
+        display: flex;
+    }
+    .shipping_method2{
+        margin-top: 5px;
+        display: flex;
+        padding-top: 50px;
+        padding-left: 10px;
+        padding-bottom: 50px;
+    }
+    .shipping_method2>div:first-child{
+        width:30%;
+    }
+    .delivery_time{
+        display:flex;
+    }
+    .node{
+
+    }
+    .in_between_node{
+        margin-top: 25px;
+        border:1px solid gray;
+        background-color: gray;
+        height:0;
+        background-color: gray;
+        width:100%;
+    }
+    .below_ship_meth2{
+        padding-top: 20px;
+        display: flex;
+        font-size: small;
+    }
+    .shiping_amt{
+        /*  */
+        height:30px;
+        text-align: left;
+    }
+    .additional_notes{
+        padding:15px;
+        background-color: white;
+        border-radius: 5px;
+        display:flex;
+    }
+    .notes>input{
+        width:600px;
+        height: 50px;
+        text-align: start;
+        border: 1px solid lightgray;
+    }
+    .payment_details{
+        background-color: white;
+        border-radius:5px;
+        margin-bottom: 15px;
+    }
+    .below_right_page_layout{
+        padding-top: 25px;
+        background-color: white;
+        border-radius: 10px;
+    }
+    .right_page_layout_payment{
+        background-color: white;
+        border-radius: 5px;
+        display:flex;
+        padding:15px;
+        display: flex;
+        justify-content: space-between;
+    }
+    button{
+        margin-left: 25px;
+        width: 90%;
+        height:50px;
+        background-color: orangered;
+        color:white;
+        border-radius: 25px;
+        font-size: x-large;
+        margin-bottom: 15px;
+    }
+    .below_subtotal{
+        width:90%;
+        border:1px solid gray;
+        height: 0;
+        margin-left:5%;
+        background-color: gray;
+        border-radius: 10px;
+    }
+</style>
+
+<body>
+    <div class="trade_contract_main_payment_page">
+        <div class="trade_assurance_div">
+            <div class="trade_assurance_main">
+                <div class = "trade_icon">
+                    <img src="https://sc04.alicdn.com/kf/H7e9276065b604e0e98c23e96b53b8847x.jpg" width="20">
+                </div>
+                <div class = "trade_title">
+                    <span>Trade Assurance</span>
+                    <span>protects your Alibaba.com orders </span>
+                </div>&nbsp;&nbsp;
+                <div class="trade_intro_subject_line"></div>
+            </div>
+        </div>
+        <div class="page_main_layout">
+            <div class="left_page_layout">
+                <div class="shipping_address_div">
+                    <div class="shipping_address">Shipping Address</div>
+                    <div class="address">
+                        <input type="text" placeholder="Add address here">
+                    </div>
+                </div>
+
+                <div class= "product_block">
+
+                </div>
+
+                <div class="shipping_block">
+                    <div class="shipping_block_header">
+                        <div>
+                            <img src="https://www.kindpng.com/picc/m/69-693779_transparent-background-info-icon-hd-png-download.png" width="15">&nbsp;
+                        </div>
+                        <div>
+                            <span>Logistics information to be confirmed</span>
+                            <span><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSd-9oRY8xCZoFyKXV4utnckZTSTM9HYCKTXs8hBEQpUXLA87m6PBX4XlbjJH6ERgTvmYI&usqp=CAU" width="10">Chat with the supplier</span>
+                        </div>
+                    </div>
+                    <div class="shipping_block_1"></div>
+                    <div class="shipping_method1">
+                        <div>Shipping methods</div>
+                        <div>
+                            <img src="https://www.sugoji.com/uploads/161293564994-949900_flight-airplane-logo-png-transparent-png.png" width="15">
+                            <span>Express</span>
+                        </div>
+                    </div>
+                    <div class="shipping_method2">
+                        <div>Delivery timeline</div>
+                        <div class="delivery_time">
+
+                            <div class= "node">
+                                <div>Payment</div>
+                                <div>&#9679;</div>
+                            </div>
+                            <div class="in_between_node">&nbsp;&nbsp;&nbsp;Lead time 3 days</div>&nbsp;&nbsp;&nbsp;
+                            <div class= "node">
+                                <div>Dispatch</div>
+                                <div>&nbsp;&nbsp;&nbsp;&#9679;</div>
+                                <div>CN</div>
+                            </div>
+                            <div class="in_between_node" style="text-align: center;">&nbsp;&nbsp;&nbsp;Delivery date to be confirmed</div>&nbsp;&nbsp;&nbsp;
+                            <div class= "node">
+                                <div>Received</div>
+                                <div>&nbsp;&nbsp;&nbsp;&#9679;</div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="below_ship_meth2">
+                        <span style="width:80%;">&nbsp;</span>
+                        <div class="shiping_amt"> Shipping fee: To Be Negotiated</div>
+                    </div>
+                </div>
+
+                <div class="payment_details">
+                    1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>1<br>
+                </div>
+
+                <div class="additional_notes">
+                    <div>Additional notes(optional) &nbsp;&nbsp;&nbsp;&nbsp;</div>
+                    <div class="notes"><input type="text" placeholder="Please fill in"></div>
+                </div>
+
+                <div>
+                    <input type="checkbox"> 
+                    I agree to share my business card with supplier.
+                </div>
+            </div>
+            
+            <div class="right_page_layout">
+                <div class="below_right_page_layout">
+                    <div class="right_page_layout_payment">
+                        <div>Subtotal</div>
+                        <div class="amount">usd</div>
+                    </div>
+                    <div class="below_subtotal"></div>
+                    <div class="right_page_layout_payment">
+                        <div>Payment Amount:</div>
+                        <div class="amount">To be negotiated</div>
+                    </div>
+                    <div><button>Submit order</button></div>
+                </div>
+                <div style="margin-top: 15px;">Payment Security: &nbsp;&nbsp;&nbsp;
+                    <img src="https://www.kindpng.com/picc/m/26-269378_verisign-secured-logo-hd-png-download.png" width="35"> &nbsp;&nbsp;&nbsp;
+                    <img src="data:image/png;base64,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" width="45">
+                
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+
