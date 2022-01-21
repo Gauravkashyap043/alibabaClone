@@ -1,0 +1,64 @@
+section#productSection>div {
+    background-color: #f2f2f2;
+    width: 100%;
+    display: flex;
+    padding: 50px 8%;
+    box-sizing: border-box;
+}
+
+#productSection #subCategory {
+    flex: 3;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+
+}
+#productSection #subCategory a{
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    /* text-align: justify; */
+    padding-right: 30px;
+}
+#productSection #subCategory a:nth-child(n+2):hover{
+    color: #ff6600;
+    text-decoration: underline;
+}
+#productSection #Car {
+    flex: 12;
+    /* border: 1px solid black; */
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 10px;
+    height: fit-content;
+}
+#productSection #Car>div{
+    padding: 5px;
+    /* padding-bottom: 15px; */
+    height: fit-content;
+    /* border: 1px solid black; */
+    background-color: rgb(231, 231, 231);
+    cursor: pointer;
+    
+}
+#productSection #Car>div:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+#productSection #Car>div>p{
+    font-size: 14px;
+    margin: 5px;
+}
+#productSection #Car>div>p:nth-child(2){
+    /* border: 1px solid black; */
+    height: 34px;
+    overflow-y: hidden;
+}
+#productSection #Car>div>p:nth-child(3){
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+#productSection #Car img{
+    width: 100%;
+}
