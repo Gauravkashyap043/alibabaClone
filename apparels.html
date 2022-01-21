@@ -5,70 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        #apparels{
-            display: block;
-            width: 80%;
-            margin: auto;
-            /* border: 1px solid red; */
-            /* background-color: ; */
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
-        }
-        #apparels_left{
-            width: 18%;
-            padding: 5px;
-           /* background-color: red; */
-           position: fixed;
-        }
-        .trend_overlay{
-            width: 100%;
-            padding: 5px;
-            margin: 5px 5px 5px 0px;
-            /* border: 0.5px solid red; */
-            /* position: relative; */
-        }
-        .trend_overlay:hover{
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
-        }
-        .trend_overlay:hover + .overleafy, .overleafy:hover{
-            display: flex;
-            flex-direction: column;
-            line-height: 10px;
-            height: fit-content;
-            top: 30px;
-            left: 27%;
-            padding: 10px;
-            background-color: blanchedalmond;
-            width: 210px;
-            z-index: 3;
-            position: fixed;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
-        } 
-        .overleafy{
-            display: none;
-        }
-        #apparel_rigth{
-            width: 75%;
-            display: grid;
-            grid-template-columns: repeat(4,22%);
-            margin-left: 25%;
-            background-color: white;
-            margin-top: 50px;
-            gap: 20px;
-            padding: 2%;
-            /* border: 1px solid green; */
-        }
-        a{
-            text-decoration: none;
-            color: black;
-        }
-        .zeal_box{
-            width: 180px;
-            /* z-index: -1; */
-            margin: 10px;
-            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
-        }
-    </style>
+    <link rel="stylesheet" href="./apparels.css">
 </head>
 <body>
     <div id="apparels">
@@ -250,115 +187,161 @@
     }
     ];
     var funda = [
-{
- img:"https://s.alicdn.com/@sc04/kf/Hc560d406452e41e6902beb258c45349c6.jpg_220x220.jpg",
- text:"2021 Baby Stroller Accessories-Footmuff Cold Weather Kids Sleeping Bag Water Repellent Car Seat Cover For Stroller & Push Chair",
- price:"₹492.86",
-},{
- img:"https://s.alicdn.com/@sc04/kf/H34899f77b37f4f4d9928861ffdd9c46fj.jpg_220x220.jpg",
- text:"Famicheer Baby Feeding Apron Bibs With Sleeves For Weaning Waterproof",
- price:"₹269.53",
-},{
- img:"https://s.alicdn.com/@sc04/kf/Hc8d6b670439f45e88776fdb717ebf15ap.jpg_220x220.jpg",
- text:"Best Selling Custom Printed Bibs Plastic Custom Baby Bibs Disposable Waterproof Bibs",
- price:"₹393",
 
-},{
- img:"https://s.alicdn.com/@sc04/kf/H2b34409f61974c31a733f15e016c2524G.jpg_220x220.jpg",
- text:"Natucare BSCI children custom waterproof baby long sleeved apron bibs white",
- price:"₹293.53",
-},
-{
- img:"https://s.alicdn.com/@sc04/kf/Ha7fe53c6379f49a3beca59997b2148a9p.jpg_220x220.jpg",
- text:"Stunning Purple Dubai Arabic Evening Dresses Beaded Long Sleeve Moroccan Kaftan",
- price:"₹1623.24",
-},{
- img:"https://s.alicdn.com/@sc04/kf/H414ac827bcd14dc88d9e5a126f8c4256H.jpg_220x220.jpg",
- text:"2020 Summer Women Casual Plus Size Dress Maxi Abaya islamic clothing",
- price:"₹677.68",
-},{
- img:"https://s.alicdn.com/@sc04/kf/H7fc92335f35c44b68affe9eb8c025954z.jpg_220x220.jpg",
- text:"Wholesale Muslim Women Dress Pink Turkish Long Dress Islamic Women Dubai Abaya",
- price:"₹997.26",
 
-},{
- img:"https://s.alicdn.com/@sc04/kf/H2b28e95ac4bf4faf8ff3532eb82f0509Y.jpg_220x220.jpg",
- text:"wholesale good quality dubai daffah thawb muslim khamis thawb",
- price:"₹716.18",
-},
-{
- img:"https://s.alicdn.com/@sc04/kf/H5fc5ac0a31a9477abbc40859c21c9aa5z.jpg_220x220.jpg",
- text:"Sofa Elastic webbing",
- price:"₹38.51",
-},{
- img:"https://s.alicdn.com/@sc04/kf/HTB1LkKDgS7PL1JjSZFHq6AciXXaF.jpg_220x220.jpg",
- text:"Manual KAM garment snap button for DK93 or DK98 hand Machine",
- price:"₹2,310.25",
-},{
- img:"https://s.alicdn.com/@sc04/kf/HTB1Hz.gc56guuRjy0Fmq6y0DXXaE.jpg_220x220.jpg",
- text:"China manufacturer wholesale customized metal various suspender clips",
- price:"₹7.71",
+    {
+        id : 1,
+        productTitle: "2021 Baby Stroller Accessories-Footmuff Cold Weather Kids Sleeping Bag Water Repellent Car Seat Cover For Stroller & Push Chair",
+        price: 685.38,
+        qty : 10,
+        productImg: [
+            "https://s.alicdn.com/@sc04/kf/Hc560d406452e41e6902beb258c45349c6.jpg_220x220.jpg",
+            "https://s.alicdn.com/@sc04/kf/Hc560d406452e41e6902beb258c45349c6.jpg_220x220.jpg",
+            "https://s.alicdn.com/@sc04/kf/Hc560d406452e41e6902beb258c45349c6.jpg_220x220.jpg"
+        ]
+    },
+    {
+        id : 2,
+        productTitle: "Famicheer Baby Feeding Apron Bibs With Sleeves For Weaning Waterproof",
+        price: 2804.64,
+        qty : 10,
+        productImg: [
+            "https://s.alicdn.com/@sc04/kf/H34899f77b37f4f4d9928861ffdd9c46fj.jpg_220x220.jpg",
+            "https://s.alicdn.com/@sc04/kf/H34899f77b37f4f4d9928861ffdd9c46fj.jpg_220x220.jpg",
+            "https://s.alicdn.com/@sc04/kf/H34899f77b37f4f4d9928861ffdd9c46fj.jpg_220x220.jpg"
+        ]
+    },
+    {
+        id : 3,
+        productTitle: "Best Selling Custom Printed Bibs Plastic Custom Baby Bibs Disposable Waterproof Bibs",
+        price: 846.33,
+        qty : 10,
+        productImg: [
+            "https://s.alicdn.com/@sc04/kf/Hc8d6b670439f45e88776fdb717ebf15ap.jpg_220x220.jpg",
+            "https://s.alicdn.com/@sc04/kf/Hc8d6b670439f45e88776fdb717ebf15ap.jpg_220x220.jpg",
+            "https://s.alicdn.com/@sc04/kf/Hc8d6b670439f45e88776fdb717ebf15ap.jpg_220x220.jpg",
+        ]
+    },
+    {
+        id : 4,
+        productTitle: "Natucare BSCI children custom waterproof baby long sleeved apron bibs white",
+        price: 3542.38,
+        qty : 10,
+        productImg: [
+            "https://s.alicdn.com/@sc04/kf/H2b34409f61974c31a733f15e016c2524G.jpg_220x220.jpg",
+            "https://s.alicdn.com/@sc04/kf/H2b34409f61974c31a733f15e016c2524G.jpg_220x220.jpg",
+            "https://s.alicdn.com/@sc04/kf/H2b34409f61974c31a733f15e016c2524G.jpg_220x220.jpg",
+        ]
+    },
+    {
+        id : 5,
+        productTitle: "Stunning Purple Dubai Arabic Evening Dresses Beaded Long Sleeve Moroccan Kaftan",
+        price: 4466.48,
+        qty : 10,
+        productImg: [
+             "https://s.alicdn.com/@sc04/kf/Ha7fe53c6379f49a3beca59997b2148a9p.jpg_220x220.jpg",
+             "https://s.alicdn.com/@sc04/kf/Ha7fe53c6379f49a3beca59997b2148a9p.jpg_220x220.jpg",
+             "https://s.alicdn.com/@sc04/kf/Ha7fe53c6379f49a3beca59997b2148a9p.jpg_220x220.jpg"
+            
+        ]
+    },
+    {
+        id : 6,
+        productTitle: "2020 Summer Women Casual Plus Size Dress Maxi Abaya islamic clothing",
+        price: 762.39,
+        qty : 10,
+        productImg: [
+              "https://s.alicdn.com/@sc04/kf/H414ac827bcd14dc88d9e5a126f8c4256H.jpg_220x220.jpg",
+              "https://s.alicdn.com/@sc04/kf/H414ac827bcd14dc88d9e5a126f8c4256H.jpg_220x220.jpg",
+              "https://s.alicdn.com/@sc04/kf/H414ac827bcd14dc88d9e5a126f8c4256H.jpg_220x220.jpg",
+        ]
+    },
+    {
+        id : 7,
+        productTitle: "Wholesale Muslim Women Dress Pink Turkish Long Dress Islamic Women Dubai Abaya",
+        price: 6545.70,
+        qty : 10,
+        productImg: [
+            "https://s.alicdn.com/@sc04/kf/H7fc92335f35c44b68affe9eb8c025954z.jpg_220x220.jpg",
+            "https://s.alicdn.com/@sc04/kf/H7fc92335f35c44b68affe9eb8c025954z.jpg_220x220.jpg",
+            "https://s.alicdn.com/@sc04/kf/H7fc92335f35c44b68affe9eb8c025954z.jpg_220x220.jpg",
+        ]
+    },
+    {
+        id : 8,
+        productTitle: "wholesale good quality dubai daffah thawb muslim khamis thawb",
+        price: 30.04,
+        qty : 10,
+        productImg: [
+            "https://s.alicdn.com/@sc04/kf/H2b28e95ac4bf4faf8ff3532eb82f0509Y.jpg_220x220.jpg",
+            "https://s.alicdn.com/@sc04/kf/H2b28e95ac4bf4faf8ff3532eb82f0509Y.jpg_220x220.jpg",
+            "https://s.alicdn.com/@sc04/kf/H2b28e95ac4bf4faf8ff3532eb82f0509Y.jpg_220x220.jpg",
+        ]
+    },
+    {
+        id : 9,
+        productTitle: "Sofa Elastic webbing",
+        price: 15247.63,
+        qty : 10,
+        productImg: [
+            "https://s.alicdn.com/@sc04/kf/H5fc5ac0a31a9477abbc40859c21c9aa5z.jpg_220x220.jpg",
+            "https://s.alicdn.com/@sc04/kf/H5fc5ac0a31a9477abbc40859c21c9aa5z.jpg_220x220.jpg",
+            "https://s.alicdn.com/@sc04/kf/H5fc5ac0a31a9477abbc40859c21c9aa5z.jpg_220x220.jpg",
+        ]
+    },
+    {
+        id : 10,
+        productTitle: "Manual KAM garment snap button for DK93 or DK98 hand Machine",
+        price: 500.56,
+        qty : 10,
+        productImg: [
+            "https://s.alicdn.com/@sc04/kf/HTB1LkKDgS7PL1JjSZFHq6AciXXaF.jpg_220x220.jpg",
+            "https://s.alicdn.com/@sc04/kf/HTB1LkKDgS7PL1JjSZFHq6AciXXaF.jpg_220x220.jpg",
+            "https://s.alicdn.com/@sc04/kf/HTB1LkKDgS7PL1JjSZFHq6AciXXaF.jpg_220x220.jpg",
+        ]
+    },
+    {
+        id : 11,
+        productTitle: "China manufacturer wholesale customized metal various suspender clips",
+        price: 19398.37,
+        qty : 10,
+        productImg: [
+            "https://s.alicdn.com/@sc04/kf/HTB1Hz.gc56guuRjy0Fmq6y0DXXaE.jpg_220x220.jpg",
+            "https://s.alicdn.com/@sc04/kf/HTB1Hz.gc56guuRjy0Fmq6y0DXXaE.jpg_220x220.jpg",
+            "https://s.alicdn.com/@sc04/kf/HTB1Hz.gc56guuRjy0Fmq6y0DXXaE.jpg_220x220.jpg",
+        ]
+    },
+    {
+        id : 12,
+        productTitle: "Cheap Custom Your Own Logo Gun Pvc Patch Rubber Soft Pvc Patch with Factory Price",
+        price: 1000.34,
+        qty : 10,
+        productImg: [
+            "https://s.alicdn.com/@sc04/kf/H325ff3433c544f59b5c87175fda32427T.jpg_220x220.jpg",
+            "https://s.alicdn.com/@sc04/kf/H325ff3433c544f59b5c87175fda32427T.jpg_220x220.jpg",
+            "https://s.alicdn.com/@sc04/kf/H325ff3433c544f59b5c87175fda32427T.jpg_220x220.jpg",
+        ]
+    }
 
-},{
- img:"https://s.alicdn.com/@sc04/kf/H325ff3433c544f59b5c87175fda32427T.jpg_220x220.jpg",
- text:"Cheap Custom Your Own Logo Gun Pvc Patch Rubber Soft Pvc Patch with Factory Price",
- price:"₹53.14",
-},
-{
- img:"https://s.alicdn.com/@sc04/kf/H93a30914870c4be28a4dace0c20d499fE.jpg_220x220.jpg",
- text:"Hot Popular Unique Design OEM Custom Tie Dye shirts Round Neck Long Sleeve 100% Cotton Autumn Casual T Shirt For Men",
- price:"₹1,155.13",
-},{
- img:"https://s.alicdn.com/@sc04/kf/Hb67397d5404c4a789944d58a06e0d8aaZ.jpg_220x220.jpg",
- text:"Wholesale custom logo design 100% cotton polo t-shirt golf formal business polo shirt for men",
- price:"₹284.17",
-},{
- img:"https://s.alicdn.com/@sc04/kf/HTB1bkAYcfBj_uVjSZFpq6A0SXXam.jpg_220x220.jpg",
- text:"Stunning 3D effect artwork T-shirt,sort TPU patches,100% cotton,custom design",
- price:"₹57.76",
-
-},{
- img:"https://s.alicdn.com/@sc04/kf/H27cf00c033a34dfabb5b1867d576ca49M.jpg_220x220.jpg",
- text:"Low MOQ for OEM ODM Chenille Bear Patch Unisex Chenille Patch Custom Chenille Hoodie",
- price:"₹1,193.63",
-},
-{
- img:"https://s.alicdn.com/@sc04/kf/H06c9fe631ddd4aeba52374022d8354a4T.jpg_220x220.jpg",
- text:"Latest design solid color plain 100% cotton men casual full face zip hoodie7 buyers",
- price:"₹1,386.15",
-},{
- img:"https://s.alicdn.com/@sc04/kf/H2f66c881dda947078dc893b28a836fecp.jpg_220x220.jpg",
- text:"Hot sales jacket for man light weight outdoor winter padded man jackets",
- price:"₹419.70",
-},{
- img:"https://s.alicdn.com/@sc04/kf/U7487306d64cb42d68d426a42bfa8abd2l.png_220x220.png",
- text:"New Men's Jeans 2021 Casual Wear Best Quality Jeans Fashion Design Solid Skinny Ripped Denim Jeans",
- price:"₹566.55",
-
-},{
- img:"https://s.alicdn.com/@sc04/kf/U217021c296cf4723ae35d96a89306f13I.jpg_220x220.jpg",
- text:"Custom Made Hoodie | Plain Hoodies",
- price:"₹23.11",
-}
 ]
     let dav = document.getElementById("apparel_rigth");
 
-    funda.forEach(({img,text,price}) => {
+    funda.forEach(({id, productTitle, price, productImg, qty}) => {
         let div = document.createElement("div");
 
         let p1 = document.createElement("p");
         let t1 = "";
         for(i=0;i<15;i++){
-            t1 += text[i];
+            t1 += productTitle[i];
         }
-        if(text.length >15){
+        if(productTitle.length >15){
             p1.innerHTML = `<a href="#">${t1}..<b>Read more</b></a>`
         }else{
-            p1.innerHTML = `<a href="#">${text}</a>`;
+            p1.innerHTML = `<a href="#">${productTitle}</a>`;
         }
-        // p1.innerHTML = `<a href="#">${text}</a>`;
+        // p1.innerHTML = `<a href="#">${productTitle}</a>`;
         let image = document.createElement("img");
-        image.src = `${img}`;
+        image.src = `${productImg}`;
         image.style.width = "100%";
         image.style.height = "150px"
         let p2 = document.createElement("p");
@@ -369,12 +352,10 @@
         div.setAttribute("class","zeal_box")
         div.addEventListener("click",function(params){
             let obj = {
-                img_tag : img,
-                text_tag: text,
-                price_tag:price
+                id:id, productTitle:productTitle, price:price, productImg:productImg, qty:qty,
             }
             localStorage.setItem("details_prod",JSON.stringify(obj));
-            window.location.href = "./apparelprod.html";
+            window.location.href = "./apparel.html";
         })
         dav.append(div);
     });
