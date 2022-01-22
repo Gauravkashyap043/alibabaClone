@@ -7,307 +7,224 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body {
-            background-color: whitesmoke;
-            margin: 0px;
+        #image {
+            display: flex;
         }
 
-        #head {
+        #image>button {
+            display: inline;
+            height: 25px;
+            width: 95px;
+            margin-top: 80px;
             background-color: white;
-            display: flex;
-            height: auto;
+            border: 1px solid lightgray;
         }
 
-        #head>img {
-            height: 110px;
-            width: 250px;
-            margin-left: 5%;
-        }
-
-        #head h2 {
-            margin-top: 40px;
-            font-family: sans-serif;
-        }
-
-        #assure {
-            display: flex;
-            font-family: sans-serif;
-        }
-
-        #assure p {
-            margin-top: 30px;
-            margin-left: 10px;
-        }
-
-        #gridd {
+        #container {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            margin-left: auto;
+            height: auto;
+            width: auto;
             margin-right: auto;
+            margin-left: auto;
         }
 
         #left {
             display: grid;
-            grid-template-rows: repeat(6);
-            grid-row-gap: 20px;
-            margin-left: auto;
-            margin-right: auto;
+            grid-template-rows: repeat(11, 1fr);
         }
 
-        #adres {
-            height: 80px;
-            width: 95%;
-            background-color: white;
-            margin-left: auto;
-            margin-right: auto;
-            border-radius: 10px;
-        }
-
-        #address>p {
-            text-align: center;
-            margin-top: 22px;
+        #left>div {
+            text-align: end;
             font-family: sans-serif;
         }
 
-        #address {
-            border-style: dotted;
-            margin-top: 8px;
-            border-color: lightgray;
-            width: 95%;
-            margin-left: auto;
-            margin-right: auto;
+        #right {
+            display: grid;
+            grid-template-rows: repeat(11, 1fr);
+            width: 55%;
+            gap: 0px;
         }
 
-        #pDetails {
-            width: 95%;
-            height: auto;
-            background-color: white;
-            margin-left: auto;
-            margin-right: auto;
-            border-radius: 10px;
-        }
-
-        #seller {
-            display: flex;
-            justify-content: space-between;
-            font-family: sans-serif;
-            width: 95%;
-        }
-
-        #orderDetails {
-            display: flex;
+        #right>div {
             font-family: sans-serif;
         }
 
-        #orderDetails>img {
-            height: 80px;
-            width: 80px;
-        }
-
-        #pieces {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        #one {
-            display: flex;
-            width: 44%;
-            font-size: small;
-            font-family: sans-serif;
-            background-color: whitesmoke;
-            border-radius: 5px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        #two {
-            display: flex;
-            margin-right: 3%;
-        }
-
-        #two>p {
-            margin-right: 1%;
-        }
-
-        #two>input {
+        .inputs {
             height: 35px;
-            width: 45px;
+            width: 300px;
+            margin-top: 5px;
+            border: 1px solid lightgray;
+            text-align: center;
         }
 
-        #btn>button {
-            width: 95%;
-            height: 30px;
-            border-radius: 10px;
-            background-color: white;
-            border-color: lightgray;
-            font-family: sans-serif;
+        .name {
+            height: 35px;
+            width: 144px;
+            margin-top: 5px;
+            border: 1px solid lightgray;
         }
 
-        #info {
-            margin-right: auto;
-            margin-left: auto;
-            font-family: sans-serif;
-        }
-
-        #total {
-            margin-left: 70%;
-            font-family: sans-serif;
-            background-color: whitesmoke;
-        }
-
-        #methods {
-            background-color: white;
-            margin-left: auto;
-            margin-right: auto;
-            border-radius: 10px;
-            width: 95%;
-            font-family: sans-serif;
-        }
-
-        #second {
+        .input {
+            margin-top: 18px;
+            border: 1px solid lightgray;
             display: flex;
+            position: absolute;
         }
 
-        #second>input {
-            margin-top: 18.5px;
+        .trade {
+            margin-top: 18px;
+            border: 1px solid lightgray;
         }
 
-        #agre {
-            display: flex;
-            margin-left: 2%;
-            font-family: sans-serif;
+        #trades {
+            margin-top: 15px;
         }
 
-        #agre>input {
-            margin-top: 18.5px;
-        }
-
-        #sub {
-            background-color: white;
-            width: 70%;
-            border-radius: 10px;
-            font-family: sans-serif;
-        }
-
-        .st {
-            display: flex;
-            justify-content: space-between;
-            width: 90%;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        #smit>button {
-            margin-left: 5%;
-            border-radius: 10px;
-            width: 90%;
-            border-style: none;
+        #reg {
+            height: 42px;
+            width: 150px;
             background-color: orangered;
+            border-style: none;
             color: floralwhite;
-            height: 30px;
-        }
-
-        #security {
             font-family: sans-serif;
-            font-size: smaller;
+            margin-top: 18px;
+            font-size: 14px;
         }
     </style>
 </head>
 
 <body>
     <div id="all">
-        <div id="head">
-            <img src="https://tse2.mm.bing.net/th?id=OIP.kRZM2PSWUlHt1a7-kaw6hQHaD3&pid=Api&P=0&w=365&h=190">
-            <h2>Buy Now</h2>
+        <div id="image">
+            <img src="https://tse2.mm.bing.net/th?id=OIP.7pylWIZ3pn7weZhBBhGiRwHaDu&pid=Api&P=0&w=377&h=190">
+            <button>English</button>
         </div>
-        <div id="assure">
-            <h2>👑 Trade Assurance</h2>
-            <p>protects your Alibaba.com orders</p>
-        </div>
-        <div id="gridd">
+        <div id="container">
             <div id="left">
-                <div id="adres">
-                    <div id="address">
-                        <p>🗺️Add an address</p>
-                    </div>
+                <div>
+                    <p>Country/Region:</p>
                 </div>
-                <div id="pDetails">
-                    <div id="seller">
-                        <p>Yiwu Longjie Import & Export Trading Co., Ltd.</p>
-                        <hr>
-                        <p>Chat with the supplier</p>
-                    </div>
-                    <hr>
-                    <div id="orderDetails">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNOE8-W9HJQ4PfOjcd8b3LiDEc-vZto93Skg&usqp=CAU"
-                            alt="">
-                        <p>Phone i 12 Pro MAX 6.7 inch Android Smartphones 12GB+512GB 10-Core 5G LET Cellphones 4 Camera
-                            cell phone</p>
-                    </div>
-                    <div id="pieces">
-                        <div id="one">
-                            <p>Color : Black,</p>
-                            <p>RAM : 12g+512G ,</p>
-                            <br>
-                            <p>Storage Capacity : 512GB US PLUG</p>
-                        </div>
-                        <div id="two">
-                            <p>USD 54.90/ Piece</p>
-                            <input type="number">
-                        </div>
-                    </div>
-                    <br>
-                    <div id="btn">
-                        <button>Customization Service</button>
-                    </div>
-                    <div id="info">
-                        <p>The minimum quantity required for customization options is 500 Pieces.
-                        </p>You currently have 1 Pieces in your cart.
-                    </div>
-                    <br>
-                    <div id="total">
-                        <p>Subtotal : USD 54.90</p>
-                    </div>
+                <div>
+                    <p>Please select trade role:</p>
                 </div>
-                <div id="methods">
-                    <div id="first">
-                        <p>The transaction fee varies depending on the payment method chosen. Processing time and fees.
-                        </p>
-                    </div>
-                    <hr>
-                    <div id="second">
-                        <p>Payment methods :</p>
-                        <input type="checkbox">
-                        <p>Cash on Delivery</p>
-                    </div>
+                <div>
+                    <p>Email Address:</p>
                 </div>
-                <div id="agre">
-                    <input type="checkbox">
-                    <p>I agree to share my business card with supplier.</p>
+                <div>
+                    <p>Login Password:</p>
+                </div>
+                <div>
+                    <p>Confirm Password:</p>
+                </div>
+                <div>
+                    <p>Company Name:</p>
+                </div>
+                <div>
+                    <p>Full Name:</p>
+                </div>
+                <div>
+                    <p>Tel:</p>
+                </div>
+                <div>
+                    <p>Verification:</p>
+                </div>
+                <div>
+                    <p></p>
+                </div>
+                <div>
+                    <p></p>
                 </div>
             </div>
-            <div id="right">
-                <div id="sub">
-                    <div class="st">
-                        <p>Subtotal</p>
-                        <p>USD 54.90</p>
-                    </div>
-                    <hr style="width: 90%;">
-                    <div class="st">
-                        <p>Payment Amount:</p>
-                        <p>To be negotiated</p>
-                    </div>
-                    <div id="smit">
-                        <button>Submit order</button>
-                    </div>
-                    <br>
+            <form id="right">
+                <div>
+                    <input type="text" class="inputs" placeholder="India" id="country">
                 </div>
-                <div id="security">
-                    <p>Payment Security: ✅ PCI</p>
+                <div>
+                    <select id="trades">
+                        <option value="">--</option>
+                        <option class="trade" value="Buyer">
+                            Buyer</option>
+                        <option value="Seller" class="trade">
+                            Seller</option>
+                        <option value="Both" class="trade">
+                            Both</option>
+                    </select>
                 </div>
-            </div>
+                <div>
+                    <input type="text" id="mail" placeholder="Please set the email as the login name" class="inputs">
+                </div>
+                <div>
+                    <input type="text" id="pass" class="inputs" placeholder="Please set the login password">
+                </div>
+                <div>
+                    <input type="text" id="confirmPass" class="inputs"
+                        placeholder="Please set the login password again">
+                </div>
+                <div>
+                    <input type="text" class="inputs" id="company" placeholder="Must be a legally registered company">
+                </div>
+                <div>
+                    <input type="text" id="fname" class="name" placeholder="Please enter your first name">
+                    <input type="text" class="name" id="lname" placeholder="Please enter your last name">
+                </div>
+                <div>
+                    <input class="inputs" id="phone" type="number" placeholder="Phone number">
+                </div>
+                <div>
+                    <input type="checkbox" class="input" onclick="verified()">
+                    <p id="flax" style="margin-left: 27px;">Please click here to verify</p>
+                </div>
+                <div>
+                    <input type="checkbox" id="agree">While creating a website account: I agree to abide by the
+                    Alibaba.com
+                    Membership Agreement- Willing to receive emails
+                    from Alibaba.com members and services
+                </div>
+                <div>
+                    <button id="reg" onclick="userDetails(event)">Agree and Register</button>
+                </div>
+            </form>
         </div>
-    </div>
 </body>
 
 </html>
+<script>
+
+    function verified() {
+        document.getElementById("flax").style.backgroundColor = "lightgreen"
+    }
+
+    let arr = [];
+
+    function userDetails(event) {
+        event.preventDefault();
+
+        let country = document.getElementById("country").value;
+        let trades = document.getElementById("trades").value;
+        let mail = document.getElementById("mail").value;
+        let pass = document.getElementById("pass").value;
+        let confirmPass = document.getElementById("confirmPass").value;
+        let company = document.getElementById("company").value;
+        let fname = document.getElementById("fname").value;
+        let lname = document.getElementById("lname").value;
+        let phone = document.getElementById("phone").value;
+
+        let everyDetails = {
+            country,
+            trades,
+            mail,
+            password: pass,
+            confirmPassword: confirmPass,
+            company,
+            firstName: fname,
+            lastName: lname,
+            phoneNumber: phone
+        }
+
+        arr.push(everyDetails);
+        localStorage.setItem("All_Details", JSON.stringify(arr));
+    }
+
+
+</script>
