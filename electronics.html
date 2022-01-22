@@ -5,11 +5,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Electronics</title>
+    <link rel="icon" href="https://bit.ly/3rwY3Og" type="image" />
     <link rel="stylesheet" href="./style/electronics.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <link rel="stylesheet" href="./style/navbar.css">
+    <script src="https://kit.fontawesome.com/db1e80451c.js" crossorigin="anonymous"></script>
+    
 </head>
 
 <body>
+    <section id="navsection">
+
+    </section>
+
+
+
     <section id="productsection">
         <div>
             <div id="subcategory">
@@ -51,7 +62,18 @@
             </div>
         </div>
     </section>
+
+    <section id="footersection">
+
+    </section>
 </body>
 
 </html>
 <script src="./script/electronics.js"></script>
+<script type="module">
+import footer from "./components/footer.js";
+import navbar from "./components/navbar.js";
+
+document.querySelector("#footersection").innerHTML = footer();
+document.querySelector("#navsection").innerHTML = navbar();
+</script>

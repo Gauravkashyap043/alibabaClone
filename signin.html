@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style/signin.css">
+    <link rel="stylesheet" href="./style/footer.css">
 </head>
 <body>
     <div id="logo">
-        <img src="https://s.alicdn.com/@img/tfs/TB1pDDmmF67gK0jSZPfXXahhFXa-2814-380.png" alt="">
+        <a href="./homefinal.html"><img src="https://s.alicdn.com/@img/tfs/TB1pDDmmF67gK0jSZPfXXahhFXa-2814-380.png" alt=""></a>
     </div>
 
     <div id="screen-banner">
@@ -54,5 +55,16 @@
             </div>
         </div>
     </div>
+
+    <section id="footersection">
+
+    </section>
 </body>
 </html>
+
+<script type="module">
+import footer from "./components/footer.js";
+
+document.querySelector("#footersection").innerHTML = footer();
+
+</script>

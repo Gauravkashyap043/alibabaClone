@@ -1,0 +1,276 @@
+
+    .body_div{
+        width:100%;
+        background-color: whitesmoke;
+    }
+    #fromnewarrivals a{
+        text-decoration: none;
+        color: black;
+    }
+    
+
+
+
+
+
+
+    .new-double-product{
+        /* border:1px solid red; */
+        margin: auto;
+        width:85%;
+        display: grid;
+        grid-template-columns: repeat(3,30%);
+        grid-template-rows: repeat(2,48.5%);
+        justify-content: space-evenly;
+    }
+    .new-double{
+        border-radius: 2%;
+        background-color: white;
+        padding:5%;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+    .double-item{
+        display: grid;
+        grid-template-columns: repeat(3,30%);
+    }
+    .double-item>a{
+        /* margin-left: 10%; */
+        padding-left: 10%;
+    }
+    .double-title>a{
+        font-weight: bold;
+    }
+    .cust_and_ready{
+        width:85%;
+        margin: auto;
+        /* border:1px solid red; */
+        display:grid;
+        grid-template-columns: repeat(2,48.5%);
+        justify-content: space-around;
+        margin-bottom: 15px;
+        /* padding-bottom: 5%; */
+    }
+    .cust, .ready{
+        background-color: white;
+        padding-left: 3%;
+        display:grid;
+        border-radius: 1%;
+        grid-template-rows: 40% 60%;
+        grid-template-columns: repeat(2,48.5%);
+        padding-bottom: 5%;
+    }
+    .cust1{
+        /* border:1px solid red; */
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        justify-items: end;
+    }
+    .cust2{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    .cust3{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        display: grid;
+        grid-template-rows: 20% 80%;
+        grid-template-columns: repeat(3,30%);
+        background-color: whitesmoke;
+        border-radius: 5px;
+        margin-right: 1%;
+    }
+    .cust3_header{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        text-align: center;
+        font-weight: bold;
+        margin-top: 5%;
+    }
+    .cust3_img1{
+        padding-left: 10%;
+        margin-top: 40%;
+    }
+    .cust4{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+        display: grid;
+        grid-template-rows: 20% 80%;
+        grid-template-columns: repeat(3,30%);
+        background-color: whitesmoke;
+        border-radius: 5px;
+        margin-left: 1%;
+    }
+    .cust4_header{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        text-align: center;
+        font-weight: bold;
+        margin-top: 5%;
+    }
+    .cust4_img1{
+        padding-left: 10%;
+        margin-top: 40%;
+    }
+    /* .ready{
+        background-color: white;
+        border-radius: 5px;
+    } */
+    .layout_prod{
+        margin-right: 10px;
+        /* border:1px solid yellowgreen; */
+        background-color: whitesmoke;
+        border-radius: 10px;
+    }
+    .layoutProduct_item{
+        /* border:1px solid yellow; */
+        display: flex;
+        padding: 20px;
+    }
+    .layoutProduct_item>a{
+        margin-right: 10px;
+    }
+    .item3div, .price{
+        text-align: center;
+    }
+    .luggage{
+        /* margin-top: 15px; */
+        /* border:1px solid red; */
+        width: 84%;
+        margin: auto;
+        display:grid;
+        margin-bottom: 10px;
+        grid-template-columns: 25% 70%;
+        justify-content: space-evenly;
+    }
+    .lug-head{
+        font-weight: bold;
+        font-size: large;
+
+    }
+    .lug-line{
+        border:1px solid gray;
+        background-color: gray;
+        height: 1px;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+    .lug-div{
+        /* border: 1px solid red; */
+        display: grid;
+        width: 85%;
+        font-size: 15px;
+        margin: auto;
+        border-radius: 10px;
+        background-color: white;
+        grid-template-columns: repeat(5,20%);
+        grid-template-rows: repeat(2,50%);
+        margin-bottom: 10px;
+        overflow: hidden;
+    }
+    .lug-div>div{
+        padding-bottom: 5px;
+        
+        margin-bottom: 10px;
+    }
+    .lug-div>div:nth-child(n+2){
+        /* border: solid black; */
+        padding: 10px;
+    }
+    .lug-img{
+        /* border:1px solid; */
+        background-repeat:no-repeat;
+        width:100%;
+        padding: 0px 10px;
+        box-sizing: border-box;
+        height: 100%;
+        grid-row-start: 1;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .lug-img>button{
+        position: relative;
+        top:40%;
+        right:-5%;
+        border-radius: 15px;
+    }
+    .lug1{
+        /* border: 1px solid yellow; */
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .info-sub{
+        display: grid;
+        grid-template-columns: 60% 50%;
+    }
+    .info{
+        /* border:1px solid red; */
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .info2{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .lug2{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .lug3{
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .lug4{
+        grid-column-start: 5;
+        grid-column-end: 6;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .lug5{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .lug6{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .lug7{
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    .lug8{
+        grid-column-start: 5;
+        grid-column-end: 6;
+        grid-row-start: 2;
+        grid-row-end: 3;
+    }
+    
