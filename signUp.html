@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign up</title>
+    <link rel="stylesheet" href="./style/footer.css">
+    <style>
+        #image {
+            display: flex;
+            width: 210px;
+            margin: 40px 30px;
+        }
+
+        #container {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 45% 55%;
+            height: auto;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        #left {
+            display: grid;
+            grid-template-rows: repeat(11, 1fr);
+        }
+
+        #left p {
+            font-size: 14px;
+            padding-right: 20px;
+        }
+
+        #left>div {
+            text-align: end;
+            font-family: sans-serif;
+        }
+
+        #right {
+            display: grid;
+            grid-template-rows: repeat(11, 1fr);
+            width: 55%;
+            gap: 0px;
+        }
+
+        #right>div {
+            font-family: sans-serif;
+        }
+
+        #right input,
+        #right label {
+            font-size: 14px;
+        }
+
+        .inputs {
+            height: 35px;
+            width: 300px;
+            margin-top: 5px;
+            border: 1px solid lightgray;
+            text-align: center;
+        }
+
+        .name {
+            height: 35px;
+            width: 144px;
+            margin-top: 5px;
+            border: 1px solid lightgray;
+        }
+
+        .input {
+            margin-top: 18px;
+            border: 1px solid lightgray;
+            display: flex;
+            position: absolute;
+        }
+
+        .trade {
+            margin-top: 18px;
+            border: 1px solid lightgray;
+        }
+
+        #trades {
+            margin-top: 15px;
+        }
+
+        #reg {
+            height: 42px;
+            width: 150px;
+            background-color: orangered;
+            border-style: none;
+            color: floralwhite;
+            font-family: sans-serif;
+            margin-top: 18px;
+            font-size: 14px;
+        }
+
+        #flax,
+        #agree {
+            font-size: 14px;
+            display: inline;
+        }
+
+        #agree input {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="all">
+        <div id="image">
+            <a href="./index.html"> <img width="100%"
+                    src="https://s.alicdn.com/@img/tfs/TB1pDDmmF67gK0jSZPfXXahhFXa-2814-380.png"></a>
+        </div>
+        <div id="container">
+            <div id="left">
+                <div>
+                    <p>Country/Region:</p>
+                </div>
+                <div>
+                    <p>Please select trade role:</p>
+                </div>
+                <div>
+                    <p>Email Address:</p>
+                </div>
+                <div>
+                    <p>Login Password:</p>
+                </div>
+                <div>
+                    <p>Confirm Password:</p>
+                </div>
+                <div>
+                    <p>Company Name:</p>
+                </div>
+                <div>
+                    <p>Full Name:</p>
+                </div>
+                <div>
+                    <p>Tel:</p>
+                </div>
+                <div>
+                    <p>Verification:</p>
+                </div>
+                <div>
+                    <p></p>
+                </div>
+                <div>
+                    <p></p>
+                </div>
+            </div>
+            <form id="right" onsubmit="userDetails(event)">
+                <div>
+                    <input type="text" class="inputs" placeholder="India" id="country">
+                </div>
+                <div>
+                    <!-- <select id="trades">
+
+                        <option value="">--</option>
+                        <option class="trade" value="Buyer">
+                            Buyer</option>
+                        <option value="Seller" class="trade">
+                            Seller</option>
+                        <option value="Both" class="trade">
+                            Both</option>
+                    </select> -->
+                    <input type="radio" value="Buyer" name="trade_role">
+                    <label for="">Buyer</label>
+                    <input type="radio" value="Seller" name="trade_role">
+                    <label for="">Seller</label>
+                    <input type="radio" value="Both" name="trade_role">
+                    <label for="">Both</label>
+
+                </div>
+                <div>
+                    <input type="text" id="mail" placeholder="Please set the email as the login name" class="inputs">
+                </div>
+                <div>
+                    <input type="password" id="pass" class="inputs" placeholder="Please set the login password">
+                </div>
+                <div>
+                    <input type="password" id="confirmPass" class="inputs"
+                        placeholder="Please set the login password again">
+                </div>
+                <div>
+                    <input type="text" class="inputs" id="company" placeholder="Must be a legally registered company">
+                </div>
+                <div>
+                    <input type="text" id="fname" class="name" placeholder="Please enter your first name">
+                    <input type="text" class="name" id="lname" placeholder="Please enter your last name">
+                </div>
+                <div>
+                    <input class="inputs" id="phone" type="number" placeholder="Phone number">
+                </div>
+                <div>
+                    <input type="checkbox" class="input">
+                    <p id="flax" style="margin-left: 27px;">Please click here to verify</p>
+                </div>
+                <div>
+                    <input type="checkbox">
+                    <p id="agree">While creating a website account: I agree to abide by the
+                        Alibaba.com
+                        Membership Agreement- Willing to receive emails
+                        from Alibaba.com members and services</p>
+                </div>
+                <div>
+                    <input type="submit" id="reg" value="Agree and Register">
+                </div>
+            </form>
+        </div>
+
+        <section id="footersection">
+
+        </section>
+</body>
+
+</html>
+<script type="module">
+
+    import footer from "./components/footer.js";
+    document.querySelector("#footersection").innerHTML = footer();
+</script>
+<script>
+    let alibabauserdb = JSON.parse(localStorage.getItem("alibabauserdb")) || [];
+
+    function userDetails(event) {
+        event.preventDefault();
+        let everyDetails = {
+            mail : document.getElementById("mail").value,
+            pass : document.getElementById("pass").value,
+            confirmPass : document.getElementById("confirmPass").value,
+            company : document.getElementById("company").value,
+            fname : document.getElementById("fname").value,
+            lname : document.getElementById("lname").value,
+            phone : document.getElementById("phone").value
+        }
+        console.log(everyDetails);
+        alibabauserdb.push(everyDetails);
+        localStorage.setItem("alibabauserdb", JSON.stringify(alibabauserdb));
+        window.location.href = "./signin.html";
+    }
+
+</script>

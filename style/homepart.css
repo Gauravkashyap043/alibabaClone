@@ -1,0 +1,259 @@
+#rfq-section a {
+    text-decoration: none;
+}
+
+a.title-info {
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    width: 93%;
+    margin: auto;
+    text-decoration: none;
+}
+
+a.title-info>img {
+    width: 4%;
+    margin-right: 15px;
+}
+
+a.title-info>h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-right: 15px;
+    font-family: Roboto, Helvetica, Tahoma, Arial, "Microsoft YaHei";
+}
+
+a.title-info>span {
+    font-size: 14px;
+    color: #999;
+    font-family: Roboto, Helvetica, Tahoma, Arial, "Microsoft YaHei";
+}
+
+a.title-info>div.label {
+    margin-left: 15px;
+    border: 3px solid #dcdee3;
+    border-radius: 3px;
+    overflow: hidden;
+    -ms-flex: 1 1;
+    flex: 1 1;
+}
+
+.rfq-content {
+    display: flex;
+    width: 93%;
+    margin: auto;
+    font-family: Roboto, Helvetica, Tahoma, Arial, "Microsoft YaHei";
+}
+
+.rfq-banner {
+    border: 1px solid black;
+    flex: 1;
+    background-image: url("https://img.alicdn.com/imgextra/i4/O1CN01euxzvT1H7DwO6LvHI_!!6000000000710-2-tps-800-375.png");
+    padding: 40px;
+    font-size: 20px;
+    color: white;
+    max-width: 40%;
+    margin-right: 20px;
+}
+
+.rfq-form {
+    flex: 1;
+    border: 6px solid #dcdee3;
+    padding: 25px;
+    box-sizing: border-box;
+}
+
+.banner-number {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
+
+.banner-number>div {
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+}
+
+.banner-number>div>span:nth-child(1) {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+}
+
+.banner-number>div>span:nth-child(2) {
+    font-size: 16px;
+    font-weight: 400;
+    color: white;
+}
+
+.banner-link {
+    padding: 5px 10px;
+    border: 1px solid #fff;
+    border-radius: 19px;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.rfq-form>h3 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #333333;
+}
+
+.rfq-form #input1 {
+    border: 1px solid #c4c6cf;
+    width: 55%;
+    height: 38px;
+    padding: 0px 12px;
+    margin-bottom: 20px;
+}
+
+.rfq-form form {
+    padding: 20px 5px;
+}
+
+.rfq-form form>div {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.rfq-form form>div>input {
+    height: 38px;
+    width: 30%;
+    padding: 0px 12px;
+    margin-right: 18px;
+    margin-bottom: 20px;
+    border: 1px solid #c4c6cf;
+}
+
+.rfq-form form>div>select {
+    height: 38px;
+    border: 1px solid #c4c6cf;
+    color: #333333;
+    font-size: 16px;
+    padding: 0px 12px;
+}
+
+.rfq-form form>a {
+    padding: 7px 20px;
+    background: #f60;
+    border-radius: 18px;
+    font-size: 16px;
+    color: #fff;
+    margin-top: 15px;
+}
+
+.justforyou {
+    margin: auto;
+    display: flex;
+    width: 93%;
+    /* border: 1px solid #c4c6cf; */
+    padding: 40px 0px 20px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    font-family: Roboto, Helvetica, Tahoma, Arial, "Microsoft YaHei";
+}
+
+.justforyou>div {
+    flex: 1;
+    margin: 12px 0px;
+    margin-left: 20px;
+    border: 3px solid #DCDEE3;
+    border-radius: 3px;
+}
+
+.jfyproducts {
+    margin: auto;
+    width: 93%;
+    /* border: 1px solid #c4c6cf; */
+    display: grid;
+    grid-template-columns: repeat(6, 15.8%);
+    justify-content: space-between;
+}
+
+.jfyproducts a{
+    color: black;
+}
+
+.jfyproducts a:hover{
+    text-decoration: underline;
+}
+
+.jfyproducts>div {
+    /* border: 1px solid #c4c6cf; */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.jfyproducts>div:hover{
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.jfyproducts>div img {
+    width: 100%;
+}
+
+.jfyproducts h2 {
+    font-family: Roboto, Helvetica, Tahoma, Arial, "Microsoft YaHei";
+    height: 32px;
+    font-size: 14px;
+    font-weight: 400;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.jfyproducts .item-info>p {
+    margin: 0px;
+    margin-bottom: 15px;
+    font-family: Roboto, Helvetica, Tahoma, Arial, "Microsoft YaHei";
+}
+
+.jfyproducts .item-info>p:nth-child(2) {
+    font-size: 16px;
+}
+
+.jfyproducts .item-info>p:nth-child(3) {
+    font-size: 14px;
+    color: #666666;
+}
+/*
+.ourtradeservice{
+    margin: auto;
+    width: 93%;
+    border: 1px solid #c4c6cf;
+    padding: 40px 0px 20px;
+    color: #333;
+    font-family: Roboto, Helvetica, Tahoma, Arial, "Microsoft YaHei";
+}
+.ourtradeservice>div:nth-child(1){
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+}
+.ourtradeservice>div:nth-child(1)>div{
+    flex: 1;
+    margin: 12px 0px;
+    margin-left: 20px;
+    border: 3px solid #DCDEE3;
+    border-radius: 3px;
+}
+.ourtradeservice>div:nth-child(2){
+    font-size: 14px;
+    font-weight: 400;
+}
+ .otscontent{
+    margin: auto;
+    width: 93%;
+    border: 1px solid #c4c6cf;
+    display: flex;
+    font-family: Roboto, Helvetica, Tahoma, Arial, "Microsoft YaHei";
+}
+.otscontent>div{
+    width: 25%;
+    padding-right: 20px;
+} */

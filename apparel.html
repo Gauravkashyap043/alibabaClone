@@ -1,0 +1,109 @@
+   
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/683b4b40e3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style/apparel.css">
+    <link rel="stylesheet" href="./style/navbar.css">
+    <script src="https://kit.fontawesome.com/db1e80451c.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="https://bit.ly/3rwY3Og" type="image" />
+    <!-- <link rel="stylesheet" href="./style/fromnewarrivals.css"> -->
+    <link rel="stylesheet" href="./style/homepart.css">
+    <link rel="stylesheet" href="./style/footer.css">
+</head>
+
+<body>
+    <section id="navsection"></section>
+    <div id="displayProductdiv">
+        <div id="productImage">
+            <img src="" alt="">
+
+            <div id="multiImage">
+            </div>
+        </div>
+
+        <div id="productdesc">
+            <div id="readytoship">
+                <p>Ready to Ship</p>
+                <p><i class="far fa-check-circle"></i> In Stock <i class="far fa-check-circle"></i> Fast Dispatch</p>
+            </div>
+
+            <p id="title">
+
+            </p>
+
+            <hr>
+
+            <p id="price">
+
+            </p>
+
+            <hr>
+
+            <div id="qtyDiv">
+                <label for="">Quantity : </label>
+                <div onclick="decQty()">
+                    <p>-</p>
+                </div>
+                <input type="number">
+                <div onclick="incQty()">
+                    <p>+</p>
+                </div>
+                <span>
+                    pieces
+                </span>
+            </div>
+        </div>
+
+
+        <div id="pricedetail">
+            <div id='item-total-price'>
+                <p id="pieces"></p>
+                <p id="item-amount"></p>
+            </div>
+            <span>Processing Time 3 days</span>
+
+            <hr>
+
+            <div id='shipping-total-price'>
+                <p>Shipping</p>
+                <p>₹11,700.63</p>
+            </div>
+
+            <hr>
+
+            <div id='total-price'>
+                <p>Total</p>
+                <p id="showtotal"></p>
+            </div>
+
+            <button>Start Order</button>
+            <button><i class="far fa-envelope"></i> Contact Supplier</button>
+            <button onclick="addtocart()"><i class="fas fa-shopping-cart"></i> Add to cart</button>
+        </div>
+    </div>
+    <footer id="footersection">
+
+    </footer>
+</body>
+
+</html>
+<script src="./script/apparel.js"></script>
+<script src="./script/openproduct.js"></script>
+<script  type="module">
+     
+     import navbar from "./components/navbar.js";
+     
+
+     import footer from "./components/footer.js";
+
+     document.getElementById("footersection").innerHTML = footer();
+
+     document.getElementById("navsection").innerHTML = navbar();
+
+</script>

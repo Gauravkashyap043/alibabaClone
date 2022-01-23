@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <script src="https://kit.fontawesome.com/db1e80451c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style/shoppingcart.css">
+    <link rel="stylesheet" href="./style/footer.css">
+</head>
+
+<body>
+    <div id="header">
+        <div>
+            <a href="./index.html"><img src="https://s.alicdn.com/@img/tfs/TB1pDDmmF67gK0jSZPfXXahhFXa-2814-380.png"
+                    alt=""></a>
+        </div>
+        <p>
+            Shopping Cart
+        </p>
+    </div>
+
+    <div id="items">
+        <div id="left">
+
+        </div>
+
+        <div id="right">
+            <div>
+                <p>Total Amount</p>
+                <p id="totalamount"></p>
+            </div>
+            <div>
+                <p>Shipping Fee:</p>
+                <p>₹ 11700.63/-</p>
+            </div>
+            <hr>
+            <div>
+                <p>Payment Amount:</p>
+                <p>To be negotiated</p>
+            </div>
+
+            <button onclick="submitorder()">Submit Order</button>
+        </div>
+    </div>
+
+    <section id="footersection">
+
+    </section>
+</body>
+
+</html>
+
+<script type="module">
+    import footer from "./components/footer.js";
+
+    document.querySelector("#footersection").innerHTML = footer();
+</script>
+
+<script src="./script/shoppingcart.js"></script>
+
+<script>
+    let alibabaauth = JSON.parse(localStorage.getItem("alibabaauth")) || {};
+    function submitorder() {
+        if (alibabaauth.signedin) {
+            alert("Your order has been submitted, you will receive a call from the dealer soon.");
+            localStorage.setItem("alibabacart", JSON.stringify([]));
+            window.location.href = "./index.html";
+        }
+        else if(alibabaauth.signedin===undefined) {
+            alert("You are not signed in");
+            window.location.href = "./signin.html";
+        }
+    }
+</script>

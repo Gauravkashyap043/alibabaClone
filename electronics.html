@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics</title>
+    <link rel="icon" href="https://bit.ly/3rwY3Og" type="image" />
+    <link rel="stylesheet" href="./style/electronics.css">
+    <link rel="stylesheet" href="./style/footer.css">
+    <link rel="stylesheet" href="./style/navbar.css">
+    <script src="https://kit.fontawesome.com/db1e80451c.js" crossorigin="anonymous"></script>
+    
+</head>
+
+<body>
+    
+    <section id="navsection">
+
+    </section>
+
+
+
+    <section id="productsection">
+        <div>
+            <div id="subcategory">
+                <a href="#">Categories</a>
+                <a href="#">Printers & Scanners</a>
+                <a href="#">Action & Sports Camera</a>
+                <a href="#">Action & Sports Camera Accessory</a>
+                <a href="#">Baby & Pet Monitor</a>
+                <a href="#">Backgrounds</a>
+                <a href="#">Battery Grip</a>
+                <a href="#">Camera Filters</a>
+                <a href="#">Camera Flash Lights</a>
+                <a href="#">Camera Lens Hoods</a>
+                <a href="#">Camera Lenses</a>
+                <a href="#">Camera Straps</a>
+                <a href="#">Camera, Video Bags</a>
+                <a href="#">Car & Vehicle Camera</a>
+                <a href="#">Conference Camera</a>
+                <a href="#">Digital Cameras</a>
+                <a href="#">Digital Photo Frames</a>
+                <a href="#">Drone Sprayer</a>
+                <a href="#">Drones</a>
+                <a href="#">Drones Accessories</a>
+                <a href="#">Film Cameras</a>
+                <a href="#">Films</a>
+                <a href="#">Flash Diffusers</a>
+                <a href="#">Hunting Camera</a>
+                <a href="#">Kids Camera</a>
+                <a href="#">Len Caps</a>
+                <a href="#">Lens Adapters</a>
+                <a href="#">Mini & Hidden Camera</a>
+                <a href="#">Mini Camcorders</a>
+                <a href="#">Mobile Lenses</a>
+                <a href="#">Monopods</a>
+            </div>
+
+            <div id="electronic">
+
+            </div>
+        </div>
+    </section>
+
+    <section id="footersection">
+
+    </section>
+</body>
+
+</html>
+<script src="./script/electronics.js"></script>
+<script type="module">
+import footer from "./components/footer.js";
+import navbar from "./components/navbar.js";
+
+document.querySelector("#footersection").innerHTML = footer();
+document.querySelector("#navsection").innerHTML = navbar();
+</script>
+<script>
+    let alibabauserdb = JSON.parse(localStorage.getItem("alibabauserdb")) || [];
+    let alibabaauth = JSON.parse(localStorage.getItem("alibabaauth"));
+    
+    if (alibabaauth != null) {
+        setTimeout(() => {
+            document.querySelector("#navbar-signin-logo").innerHTML = `<i class="far fa-user fa-2x ">&nbsp</i>${alibabaauth.name}`;
+            document.querySelector("#onblock").style.display = "none";
+            let signout = document.createElement("button");
+            signout.onclick = ()=>{
+                localStorage.setItem("alibabaauth",JSON.stringify(null));
+                window.location.href = "./index.html";
+            }
+            signout.innerText = "Sign out";
+            signout.setAttribute("id","signoutbtn");
+            document.querySelector("#asign").append(signout);
+            //<button>Sign out</button>
+        }, 1000);
+    }
+</script>

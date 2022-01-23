@@ -1,0 +1,347 @@
+        body {
+            margin: 0px;
+            font-size: 0.76em;
+        }
+
+        #nav {
+            display: flex;
+            height: 80px;
+            border: 1px solid rgb(209, 207, 207);
+        }
+
+        #navsection img {
+            margin: 20px;
+            height: 25px;
+            width: 150px;
+            cursor: pointer;
+        }
+
+        #srch {
+            border: 2px solid rgb(255, 115, 0);
+            width: 56%;
+            margin: 15px 40px;
+            height: 40px;
+            display: flex;
+            justify-content: space-around;
+            border-radius: 25px;
+        }
+
+        #navsection select {
+            border: transparent;
+            width: 90px;
+            height: 25px;
+            margin: 5px;
+        }
+
+        #navsection input {
+            font-size: 14px;
+            margin: 0px;
+            height: 35px;
+            border: transparent;
+            width: 75%;
+            border: 0px;
+            text-decoration: none;
+            border-style: none;
+        }
+
+        #srch >button {
+            height: 42px;
+            width: 13%;
+            top: 10px;
+           
+            z-index: 3;
+            color: white;
+            
+            border: transparent;
+            font-size: 18px;
+            background-color: rgb(253, 95, 4);
+            border-radius: 25px;
+        }
+
+        #navsection button:hover {
+            cursor: pointer;
+            background-color: rgb(211, 79, 2);
+        }
+
+        #icns {
+            display: flex;
+            width: 340px;
+            font-size: 14px;
+            justify-content: flex-end;
+            color: gray;
+            margin-top: 25px;
+            margin-left: 70px;
+        }
+
+        #asign {
+            text-decoration: none;
+            display: flex;
+            margin-right: 30px;
+            cursor: pointer;
+            position: relative;
+            color: gray;
+        }
+
+        #navsection i {
+            height: 45px;
+            cursor: pointer;
+            text-decoration: none;
+            position: relative;
+            color: gray;
+        }
+
+        #secnav {
+            text-align: center;
+            margin-top: 10px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+                rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+            /* border: 1px solid black; */
+            height: 35px;
+            display: flex;
+            position: relative;
+            justify-content: space-between;
+        }
+
+        #left {
+            display: flex;
+            color: gray;
+            /* border: 2px solid green; */
+            width: 60%;
+        }
+
+        #right {
+            /* border: 1px solid black; */
+            width: 30%;
+            color: gray;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        #navsection a {
+            color: rgb(48, 47, 47);
+            text-decoration: none;
+            text-align: center;
+            margin: auto;
+        }
+
+        #lefta {
+            height: 38px;
+            width: 151px;
+            color: gray;
+            font-size: 17px;
+        }
+
+        /* {{{{{{{{{{{{{{{{{{CATEGORIES}}}}}}}}}}}}}}}}}} */
+
+        #menu {
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em,
+                rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em,
+                rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+            display: none;
+        }
+
+        #menu>ul {
+            display: flex;
+
+            flex-direction: column;
+        }
+
+        #menu ul {
+            list-style: none;
+            position: relative;
+            float: left;
+            margin: 0;
+            width: 250px;
+
+            word-spacing: 2px;
+            letter-spacing: 1px;
+            padding: 5px 0px;
+        }
+
+        #menu ul a {
+            display: block;
+            color: rgb(56, 55, 55);
+            width: 150px;
+            text-align: center;
+            text-decoration: none;
+            font-size: 15px;
+            line-height: 32px;
+            padding: 0 15px;
+            font-family: Helvetica, Arial, sans-serif;
+        }
+
+        #menu ul li {
+
+            position: relative;
+            float: left;
+            margin: 0;
+            padding: 0
+        }
+
+        #menu ul li:hover {
+            border-bottom: 0.5px solid gainsboro;
+            
+        }
+
+        #menu ul ul {
+
+            display: flex;
+            flex-direction: column;
+            display: none;
+            position: absolute;
+            top: 100%;
+            top: -5px;
+            left: 101%;
+            /* background: #27ae60; */
+            padding: 0
+        }
+
+        #menu ul ul li {
+            float: none;
+            margin-left: 120px;
+            width: 300px;
+            box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+        } 
+
+        #menu ul ul a {
+            line-height: 120%;
+            padding: 10px 15px
+        }
+        #menu>ul>li>ul>li{
+            background-color: white;
+        }
+        #menu ul ul ul {
+            top: 0;
+            left: 100%
+        }
+
+        #menu ul li:nth-of-type(1):hover>ul {
+            display: block;
+            top: 0px;
+        }
+        #menu ul li:nth-of-type(2):hover>ul {
+            display: block;
+            top: 0px;
+        }
+        #menu ul li:nth-of-type(3):hover>ul {
+            display: block;
+            top: 0px;
+        }
+        #menu ul li:nth-of-type(4):hover>ul {
+            display: block;
+            top: 0px;
+        }
+        #menu ul li:nth-of-type(5):hover>ul {
+            display: block;
+            top: 0px;
+        }
+        #menu ul li:nth-of-type(6):hover>ul {
+            display: block;
+            top: 0px;
+        }
+        #menu ul li:nth-of-type(7):hover>ul {
+            display: block;
+            top: 0px;
+        }
+
+        #left_first {
+            /* border: 1px solid black; */
+            color: gray;
+            font-size: 17px;
+            padding-bottom: 10px;
+
+        }
+
+        #left_first:hover>#menu {
+            display: block;
+            position: fixed;
+            width: 350px;
+            margin-top: 15px;
+            background-color: white;
+            z-index: 3;
+        }
+
+        .drop {
+            color: gray;
+            font-size: 17px;
+            padding-bottom: 15px;
+        }
+        .sub_drop{
+            position: relative;
+            display: none;
+        }
+        .drop:hover>.sub_drop{
+         position: fixed;
+            display: block;
+            color: black;
+            margin-top: 15px;
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+        }
+        #onblock{
+            height: 500px;
+            width: 270px;
+            display: none;
+            position: relative;
+            background: white;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+         rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+         rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        }
+    #asign:hover> #onblock{
+        display: block;
+        position: fixed;
+        background-color: white;
+        /* opacity:100% ; */
+        margin-left: 10px;
+        z-index: 3;
+        text-align: center;
+        margin-top: 35px;
+    }
+    #msghover{
+        height: 250px;
+        width: 300px;
+        display: none;
+        margin-top: 80px;
+        box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+         rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+         rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+        /* position: relative; */
+        margin-left: -121px;
+    }
+    #msghover > button{
+        background-color: tomato;
+        border: transparent;
+        width: 100px;
+    }
+    #asign:hover> #msghover{
+        margin-top: 30px;
+        position: absolute;
+        z-index: 3;
+        background-color: whitesmoke;
+        display: block;
+    }
+    #orderhover{
+        border: 1px solid black;
+        position: relative;
+        margin-top: 30px;
+        margin-left: -120px;
+        display: none;
+    }
+    #asign:hover> #orderhover{
+        display: block;
+        position: absolute;
+        z-index: 3;
+    }
+    #signoutbtn{
+        height: 20px;
+        width: 55px;
+        font-size: 9px;
+        border: transparent;
+        color: white;
+        border-radius: 5px;
+        background-color: #fd6500;
+     }
+     #navbar-signin-logo{
+         display: flex;
+         margin-right: 10px;
+     }
