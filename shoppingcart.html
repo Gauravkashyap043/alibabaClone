@@ -14,7 +14,7 @@
 <body>
     <div id="header">
         <div>
-            <a href="./homefinal.html"><img src="https://s.alicdn.com/@img/tfs/TB1pDDmmF67gK0jSZPfXXahhFXa-2814-380.png"
+            <a href="./index.html"><img src="https://s.alicdn.com/@img/tfs/TB1pDDmmF67gK0jSZPfXXahhFXa-2814-380.png"
                     alt=""></a>
         </div>
         <p>
@@ -67,7 +67,7 @@
         if (alibabaauth.signedin) {
             alert("Your order has been submitted, you will receive a call from the dealer soon.");
             localStorage.setItem("alibabacart", JSON.stringify([]));
-            window.location.href = "./homefinal.html";
+            window.location.href = "./index.html";
         }
         else if(alibabaauth.signedin===undefined) {
             alert("You are not signed in");
