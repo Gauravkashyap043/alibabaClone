@@ -332,3 +332,16 @@
         position: absolute;
         z-index: 3;
     }
+    #signoutbtn{
+        height: 20px;
+        width: 55px;
+        font-size: 9px;
+        border: transparent;
+        color: white;
+        border-radius: 5px;
+        background-color: #fd6500;
+     }
+     #navbar-signin-logo{
+         display: flex;
+         margin-right: 10px;
+     }

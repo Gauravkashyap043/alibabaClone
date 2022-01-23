@@ -55,7 +55,8 @@
     width: 60px;
     margin: 0px;
     border: 1px solid rgba(0, 0, 0, 0.397);
-    height: 27px;
+    /* height: 27px; */
+    height: 24px;
     box-sizing: border-box;
     text-align: center;
 }
@@ -119,10 +120,15 @@
 }
 #pricedetail>button:nth-last-child(1){
     font-size: 12px;
-    background-color: transparent;
+    background-color: #f60;
     border: transparent;
     margin-top: 15px;
-    color: rgba(0, 0, 0, 0.767);
+    color: white;
+    cursor: pointer;
+    padding: 10px 0px;
+}
+#pricedetail>button:nth-last-child(1):hover{
+    background-color: rgb(235, 94, 0);
 }
 #pricedetail hr{
     border-top: 1px dotted black;

@@ -15,6 +15,7 @@
 </head>
 
 <body>
+    
     <section id="navsection">
 
     </section>
@@ -76,4 +77,24 @@ import navbar from "./components/navbar.js";
 
 document.querySelector("#footersection").innerHTML = footer();
 document.querySelector("#navsection").innerHTML = navbar();
+</script>
+<script>
+    let alibabauserdb = JSON.parse(localStorage.getItem("alibabauserdb")) || [];
+    let alibabaauth = JSON.parse(localStorage.getItem("alibabaauth"));
+    
+    if (alibabaauth != null) {
+        setTimeout(() => {
+            document.querySelector("#navbar-signin-logo").innerHTML = `<i class="far fa-user fa-2x ">&nbsp</i>${alibabaauth.name}`;
+            document.querySelector("#onblock").style.display = "none";
+            let signout = document.createElement("button");
+            signout.onclick = ()=>{
+                localStorage.setItem("alibabaauth",JSON.stringify(null));
+                window.location.href = "./homefinal.html";
+            }
+            signout.innerText = "Sign out";
+            signout.setAttribute("id","signoutbtn");
+            document.querySelector("#asign").append(signout);
+            //<button>Sign out</button>
+        }, 1000);
+    }
 </script>

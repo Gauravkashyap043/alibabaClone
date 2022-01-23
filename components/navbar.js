@@ -33,7 +33,7 @@ function navbar(){
                          ___________ <br>
                          Submit RFQ
                     </div>
-                    <i class="far fa-user fa-2x ">&nbsp</i>Sign In <br>join free
+                    <div id="navbar-signin-logo"><i class="far fa-user fa-2x ">&nbsp</i>Sign In</div>
                 </div>
             </a>
 
@@ -60,7 +60,7 @@ function navbar(){
                     <i class="fab fa-jedi-order fa-2x"></i>
             </a>
         </div>
-        <a href="cart.html">
+        <a href="./shoppingcart.html">
             <div id="asign">
                 <i class="fas fa-shopping-cart fa-2x"></i>
             </div>

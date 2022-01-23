@@ -15,10 +15,10 @@
         }
 
         #container {
+            width: 100%;
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            grid-template-columns: 45% 55%;
             height: auto;
-            width: auto;
             margin-right: auto;
             margin-left: auto;
         }
@@ -111,7 +111,8 @@
 <body>
     <div id="all">
         <div id="image">
-           <a href="./homefinal.html"> <img width="100%" src="https://s.alicdn.com/@img/tfs/TB1pDDmmF67gK0jSZPfXXahhFXa-2814-380.png"></a>
+            <a href="./homefinal.html"> <img width="100%"
+                    src="https://s.alicdn.com/@img/tfs/TB1pDDmmF67gK0jSZPfXXahhFXa-2814-380.png"></a>
         </div>
         <div id="container">
             <div id="left">
@@ -149,7 +150,7 @@
                     <p></p>
                 </div>
             </div>
-            <form id="right">
+            <form id="right" onsubmit="userDetails(event)">
                 <div>
                     <input type="text" class="inputs" placeholder="India" id="country">
                 </div>
@@ -176,10 +177,10 @@
                     <input type="text" id="mail" placeholder="Please set the email as the login name" class="inputs">
                 </div>
                 <div>
-                    <input type="text" id="pass" class="inputs" placeholder="Please set the login password">
+                    <input type="password" id="pass" class="inputs" placeholder="Please set the login password">
                 </div>
                 <div>
-                    <input type="text" id="confirmPass" class="inputs"
+                    <input type="password" id="confirmPass" class="inputs"
                         placeholder="Please set the login password again">
                 </div>
                 <div>
@@ -193,7 +194,7 @@
                     <input class="inputs" id="phone" type="number" placeholder="Phone number">
                 </div>
                 <div>
-                    <input type="checkbox" class="input" onclick="verified()">
+                    <input type="checkbox" class="input">
                     <p id="flax" style="margin-left: 27px;">Please click here to verify</p>
                 </div>
                 <div>
@@ -204,7 +205,7 @@
                         from Alibaba.com members and services</p>
                 </div>
                 <div>
-                    <button id="reg" onclick="userDetails(event)">Agree and Register</button>
+                    <input type="submit" id="reg" value="Agree and Register">
                 </div>
             </form>
         </div>
@@ -218,43 +219,26 @@
 <script type="module">
 
     import footer from "./components/footer.js";
-
     document.querySelector("#footersection").innerHTML = footer();
-
-    function verified() {
-        document.getElementById("flax").style.backgroundColor = "lightgreen"
-    }
-
-    let arr = [];
+</script>
+<script>
+    let alibabauserdb = JSON.parse(localStorage.getItem("alibabauserdb")) || [];
 
     function userDetails(event) {
         event.preventDefault();
-
-        let country = document.getElementById("country").value;
-        let trades = document.getElementById("trades").value;
-        let mail = document.getElementById("mail").value;
-        let pass = document.getElementById("pass").value;
-        let confirmPass = document.getElementById("confirmPass").value;
-        let company = document.getElementById("company").value;
-        let fname = document.getElementById("fname").value;
-        let lname = document.getElementById("lname").value;
-        let phone = document.getElementById("phone").value;
-
         let everyDetails = {
-            country,
-            trades,
-            mail,
-            password: pass,
-            confirmPassword: confirmPass,
-            company,
-            firstName: fname,
-            lastName: lname,
-            phoneNumber: phone
+            mail : document.getElementById("mail").value,
+            pass : document.getElementById("pass").value,
+            confirmPass : document.getElementById("confirmPass").value,
+            company : document.getElementById("company").value,
+            fname : document.getElementById("fname").value,
+            lname : document.getElementById("lname").value,
+            phone : document.getElementById("phone").value
         }
-
-        arr.push(everyDetails);
-        localStorage.setItem("All_Details", JSON.stringify(arr));
+        console.log(everyDetails);
+        alibabauserdb.push(everyDetails);
+        localStorage.setItem("alibabauserdb", JSON.stringify(alibabauserdb));
+        window.location.href = "./signin.html";
     }
-
 
 </script>

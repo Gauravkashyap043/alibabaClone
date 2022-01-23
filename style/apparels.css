@@ -1,0 +1,63 @@
+#apparels{
+    display: block;
+    width: 80%;
+    margin: auto;
+    /* border: 1px solid red; */
+    /* background-color: ; */
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
+}
+#apparels_left{
+    width: 18%;
+    padding: 5px;
+   /* background-color: red; */
+   position: fixed;
+}
+.trend_overlay{
+    width: 100%;
+    padding: 5px;
+    margin: 5px 5px 5px 0px;
+    /* border: 0.5px solid red; */
+    /* position: relative; */
+}
+.trend_overlay:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
+}
+.trend_overlay:hover + .overleafy, .overleafy:hover{
+    display: flex;
+    flex-direction: column;
+    line-height: 10px;
+    height: fit-content;
+    top: 125px;
+    
+    left: 27%;
+    padding: 10px;
+    background-color: blanchedalmond;
+    width: 210px;
+    z-index: 3;
+    position: fixed;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
+} 
+.overleafy{
+    display: none;
+}
+#apparel_rigth{
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(4,22%);
+    margin-left: 25%;
+    background-color: white;
+    margin-top: 50px;
+    gap: 20px;
+    padding: 2%;
+    /* border: 1px solid green; */
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.zeal_box{
+    width: 180px;
+    /* z-index: -1; */
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px;
+}

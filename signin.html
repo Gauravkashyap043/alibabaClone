@@ -16,23 +16,23 @@
     <div id="screen-banner">
         <div id="signinform">
             <label for="">Account:</label>
-            <input type="text" placeholder="Email address or member ID">
+            <input type="text" placeholder="Email address or member ID" id="signin-mail">
 
             <div>
                 <label for="">Password:</label>
                 <a href="">Forgot Password?</a>
             </div>
 
-            <input type="text" placeholder="Password">
+            <input type="password" placeholder="Password" id="signin-password">
             
             <span>
                 <input type="checkbox">
                 <label for="">Stay signed in</label>
             </span>
-            <button>Sign in</button>
+            <button onclick="signin()">Sign in</button>
             <div>
                 <a href="">Mobile number sign in</a>
-                <a href="">Join Free</a>
+                <a href="./signUp.html">Join Free</a>
             </div>
 
             <hr>
@@ -66,5 +66,33 @@
 import footer from "./components/footer.js";
 
 document.querySelector("#footersection").innerHTML = footer();
+</script>
 
+<script>
+    let alibabauserdb = JSON.parse(localStorage.getItem("alibabauserdb")) || [];
+    function signin(){
+    let signinmail = document.querySelector("#signin-mail").value;
+    let password = document.querySelector("#signin-password").value;
+
+
+    for(let i=0; i<alibabauserdb.length; i++){
+        if(signinmail == alibabauserdb[i].mail && password == alibabauserdb[i].pass){
+            let name = alibabauserdb[i].fname;
+            let alibabaauth = {
+                name,
+                signinmail,
+                password,
+                signedin : true
+            };
+
+            localStorage.setItem("alibabaauth",JSON.stringify(alibabaauth));
+            alert("Login successfull");
+            window.location.href = "./homefinal.html";
+            return;
+        }
+    }
+
+    alert("Invalid credentials entered");
+    return;
+}
 </script>
