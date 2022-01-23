@@ -1,7 +1,7 @@
 function navbar(){
     return `
     <div id="nav">
-        <a href="./homefinal.html"><img src="https://bit.ly/3nBvG0c" alt="" /></a>
+        <a href="./index.html"><img src="https://bit.ly/3nBvG0c" alt="" /></a>
         <div id="srch">
             <select>
                 <option value="">Products</option>
