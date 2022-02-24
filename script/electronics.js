@@ -136,9 +136,10 @@ let electronicProduct = [
 displayProducts(electronicProduct);
 
 function displayProducts(data){
+    document.querySelector("#electronic").innerHTML = null;
+
     data.forEach((element)=>{
         let { id, productTitle,price, productImg } = element;
-        
         let card = document.createElement("div");
         card.onclick = ()=>{
             localStorage.setItem("openedProduct",JSON.stringify(element));
@@ -156,5 +157,24 @@ function displayProducts(data){
 
         card.append(product_img,product_title,product_price);
         document.querySelector("#electronic").append(card);
+    });
+}
+
+async function fetch_data(url) {
+    try {
+        let response = await fetch(`http://localhost:4101/electronics/${url}`);
+        let data = await response.json();
+        return data;
+    }
+    catch (er) {
+        console.log({er});
+    }
+}
+
+// displayProducts(fetch_data("action&sports-camera"));
+
+function showCategory(url){
+    fetch_data(url).then((value)=>{
+        displayProducts(value);
     });
 }
