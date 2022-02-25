@@ -133,8 +133,6 @@ let electronicProduct = [
     }
 ];
 
-displayProducts(electronicProduct);
-
 function displayProducts(data){
     document.querySelector("#electronic").innerHTML = null;
 

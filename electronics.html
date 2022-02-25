@@ -27,10 +27,10 @@
             <div id="subcategory">
                 <a href="#">Categories</a>
                 <a href="#">Printers & Scanners</a>
-                <a href="#" onclick='showCategory("action&sports-camera")'>Action & Sports Camera</a>
-                <a href="#" onclick='showCategory("action&sports-camera-acessory")'>Action & Sports Camera Accessory</a>
-                <a href="#" onclick='showCategory("baby&pet-monitor")'>Baby & Pet Monitor</a>
-                <a href="#" onclick='showCategory("backgrounds")'>Backgrounds</a>
+                <a href="./electronics-subcategory.html" onclick='storeCategory("Action & Sports Camera")'>Action & Sports Camera</a>
+                <a href="./electronics-subcategory.html" onclick='storeCategory("Action & Sports Camera Accessory")'>Action & Sports Camera Accessory</a>
+                <a href="./electronics-subcategory.html" onclick='storeCategory("Baby & Pet Monitor")'>Baby & Pet Monitor</a>
+                <a href="./electronics-subcategory.html" onclick='storeCategory("Backgrounds")'>Backgrounds</a>
                 <a href="#">Battery Grip</a>
                 <a href="#">Camera Filters</a>
                 <a href="#">Camera Flash Lights</a>
@@ -79,6 +79,8 @@ document.querySelector("#footersection").innerHTML = footer();
 document.querySelector("#navsection").innerHTML = navbar();
 </script>
 <script>
+    displayProducts(electronicProduct);
+
     let alibabauserdb = JSON.parse(localStorage.getItem("alibabauserdb")) || [];
     let alibabaauth = JSON.parse(localStorage.getItem("alibabaauth"));
     
@@ -97,4 +99,9 @@ document.querySelector("#navsection").innerHTML = navbar();
             //<button>Sign out</button>
         }, 1000);
     }
+
+    function storeCategory(category){
+        localStorage.setItem("category", JSON.stringify(category));
+    }
+
 </script>
