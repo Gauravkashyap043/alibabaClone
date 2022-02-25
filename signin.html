@@ -71,7 +71,7 @@ document.querySelector("#footersection").innerHTML = footer();
 <script>
     let alibabauserdb = JSON.parse(localStorage.getItem("alibabauserdb")) || [];
     function signin(){
-    let signinmail = document.querySelector("#signin-mail").value;
+    let email = document.querySelector("#signin-mail").value;
     let password = document.querySelector("#signin-password").value;
 
 
@@ -79,10 +79,8 @@ document.querySelector("#footersection").innerHTML = footer();
         if(signinmail == alibabauserdb[i].mail && password == alibabauserdb[i].pass){
             let name = alibabauserdb[i].fname;
             let alibabaauth = {
-                name,
-                signinmail,
-                password,
-                signedin : true
+                email,
+                password
             };
 
             localStorage.setItem("alibabaauth",JSON.stringify(alibabaauth));
