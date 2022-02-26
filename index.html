@@ -1434,14 +1434,16 @@
     import homefooter from "./components/homepagefooter.js";
     import navbar from "./components/navbar.js";
 
+    let Navbar = new Promise((resolve, reject) => {
+
+    });
+
     document.querySelector("#footersection").innerHTML = homefooter();
     document.querySelector("#navsection").innerHTML = navbar();
-
 
     var slides = document.querySelectorAll(".slide");
     var dots = document.querySelectorAll(".dot");
     var index = 0;
-
 
     function prevSlide(n) {
         index += n;
@@ -1483,20 +1485,25 @@
     }
 </script>
 <script>
-    let alibabauserdb = JSON.parse(localStorage.getItem("alibabauserdb")) || [];
-    let alibabaauth = JSON.parse(localStorage.getItem("alibabaauth"));
-    
-    if (alibabaauth != null) {
-        setTimeout(() => {
-            document.querySelector("#navbar-signin-logo").innerHTML = `<i class="far fa-user fa-2x ">&nbsp</i>${alibabaauth.name}`;
+    // let alibabauserdb = JSON.parse(localStorage.getItem("alibabauserdb")) || [];
+    // let alibabaauth = JSON.parse(localStorage.getItem("alibabaauth"));
+    let token = JSON.parse(localStorage.getItem("Authorization"));
+
+
+    if (token) {
+        setTimeout(async() => {
+            let response = await fetch(`http://localhost:4101/users/${token}`);
+            user = await response.json();
+
+            document.querySelector("#navbar-signin-logo").innerHTML = `<i class="far fa-user fa-2x ">&nbsp</i>${user.firstName}`;
             document.querySelector("#onblock").style.display = "none";
             let signout = document.createElement("button");
-            signout.onclick = ()=>{
-                localStorage.setItem("alibabaauth",JSON.stringify(null));
+            signout.onclick = () => {
+                localStorage.setItem("Authorization", null);
                 window.location.href = "./index.html";
             }
             signout.innerText = "Sign out";
-            signout.setAttribute("id","signoutbtn");
+            signout.setAttribute("id", "signoutbtn");
             document.querySelector("#asign").append(signout);
             //<button>Sign out</button>
         }, 1000);

@@ -17,7 +17,7 @@ productImg.forEach((img) => {
     let prodimg = document.createElement("img");
     prodimg.onclick = () => {
         document.querySelector("#productImage>img").src = img;
-    }
+    }   
     prodimg.src = img;
     document.querySelector("#multiImage").append(prodimg);
 });

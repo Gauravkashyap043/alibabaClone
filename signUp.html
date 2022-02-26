@@ -155,43 +155,32 @@
                     <input type="text" class="inputs" placeholder="India" id="country">
                 </div>
                 <div>
-                    <!-- <select id="trades">
-
-                        <option value="">--</option>
-                        <option class="trade" value="Buyer">
-                            Buyer</option>
-                        <option value="Seller" class="trade">
-                            Seller</option>
-                        <option value="Both" class="trade">
-                            Both</option>
-                    </select> -->
                     <input type="radio" value="Buyer" name="trade_role">
                     <label for="">Buyer</label>
                     <input type="radio" value="Seller" name="trade_role">
                     <label for="">Seller</label>
                     <input type="radio" value="Both" name="trade_role">
                     <label for="">Both</label>
-
                 </div>
                 <div>
-                    <input type="text" id="mail" placeholder="Please set the email as the login name" class="inputs">
+                    <input value="a@c.com" type="text" id="mail" placeholder="Please set the email as the login name" class="inputs">
                 </div>
                 <div>
-                    <input type="password" id="pass" class="inputs" placeholder="Please set the login password">
+                    <input value="132456" type="password" id="pass" class="inputs" placeholder="Please set the login password">
                 </div>
                 <div>
                     <input type="password" id="confirmPass" class="inputs"
                         placeholder="Please set the login password again">
                 </div>
                 <div>
-                    <input type="text" class="inputs" id="company" placeholder="Must be a legally registered company">
+                    <input value="abcdef" type="text" class="inputs" id="company" placeholder="Must be a legally registered company">
                 </div>
                 <div>
-                    <input type="text" id="fname" class="name" placeholder="Please enter your first name">
-                    <input type="text" class="name" id="lname" placeholder="Please enter your last name">
+                    <input value="triveni" type="text" id="fname" class="name" placeholder="Please enter your first name">
+                    <input value="triveni" type="text" class="name" id="lname" placeholder="Please enter your last name">
                 </div>
                 <div>
-                    <input class="inputs" id="phone" type="number" placeholder="Phone number">
+                    <input value=4654564654 class="inputs" id="phone" type="number" placeholder="Phone number">
                 </div>
                 <div>
                     <input type="checkbox" class="input">
@@ -222,23 +211,47 @@
     document.querySelector("#footersection").innerHTML = footer();
 </script>
 <script>
-    let alibabauserdb = JSON.parse(localStorage.getItem("alibabauserdb")) || [];
+    let user = JSON.parse(localStorage.getItem("Authorization"));
 
-    function userDetails(event) {
+    async function userDetails(event) {
         event.preventDefault();
-        let everyDetails = {
-            mail : document.getElementById("mail").value,
-            pass : document.getElementById("pass").value,
-            confirmPass : document.getElementById("confirmPass").value,
-            company : document.getElementById("company").value,
-            fname : document.getElementById("fname").value,
-            lname : document.getElementById("lname").value,
-            phone : document.getElementById("phone").value
+        try {
+            let everyDetails = {
+                email: document.getElementById("mail").value,
+                password: document.getElementById("pass").value,
+                companyName: document.getElementById("company").value,
+                firstName: document.getElementById("fname").value,
+                lastName: document.getElementById("lname").value,
+                telNo: document.getElementById("phone").value
+            }
+            
+            let Pass = document.getElementById("pass").value;
+            let confirmPass = document.getElementById("confirmPass").value;
+
+            if(Pass!=confirmPass) return alert("Confirm password doesn't match");
+
+            everyDetails = JSON.stringify(everyDetails);
+
+            let response = await fetch("http://localhost:4101/register", {
+                method: "POST",
+                body: everyDetails,
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
+            
+            let res = await response.json();
+            
+            if(res.message) return alert(res.message);
+            console.log(res);
+            if(res.errors) return alert(res.errors[0].key+ " : " +res.errors[0].message);
+
+            localStorage.setItem("Authorization", JSON.stringify(res.token));
+
+            window.location.href = "./index.html";
+        } catch (error) {
+            console.log(error);
         }
-        console.log(everyDetails);
-        alibabauserdb.push(everyDetails);
-        localStorage.setItem("alibabauserdb", JSON.stringify(alibabauserdb));
-        window.location.href = "./signin.html";
     }
 
 </script>
