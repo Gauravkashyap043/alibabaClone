@@ -317,38 +317,46 @@
 ]
     let dav = document.getElementById("apparel_rigth");
 
-    funda.forEach(({id, productTitle, price, productImg, qty}) => {
-        let div = document.createElement("div");
+displayData(funda);
 
-        let p1 = document.createElement("p");
-        let t1 = "";
-        for(var i=0;i<15;i++){
-            t1 += productTitle[i];
-        }
-        if(productTitle.length >15){
-            p1.innerHTML = `<a href="#">${t1}..<b>Read more</b></a>`
-        }else{
-            p1.innerHTML = `<a href="#">${productTitle}</a>`;
-        }
-        // p1.innerHTML = `<a href="#">${productTitle}</a>`;
-        let image = document.createElement("img");
-        image.src = `${productImg}`;
-        image.style.width = "100%";
-        image.style.height = "150px"
-        let p2 = document.createElement("p");
-        p2.innerHTML = `<a href="#">₹ ${price}</a>`;
-
-        div.append(image,p1,p2);
-        // div.style.width = "120px";
-        div.setAttribute("class","zeal_box")
-        div.addEventListener("click",function(params){
-            let obj = {
-                id:id, productTitle:productTitle, price:price, productImg:productImg, qty:qty,
+    function displayData(array){
+        array.forEach(({id, productTitle, price, productImg, qty}) => {
+            let div = document.createElement("div");
+    
+            let p1 = document.createElement("p");
+            let t1 = "";
+            for(var i=0;i<15;i++){
+                t1 += productTitle[i];
             }
-            localStorage.setItem("details_prod",JSON.stringify(obj));
-            window.location.href = "./apparel.html";
-        })
-        dav.append(div);
-    });
+            if(productTitle.length >15){
+                p1.innerHTML = `<a href="#">${t1}..<b>Read more</b></a>`
+            }else{
+                p1.innerHTML = `<a href="#">${productTitle}</a>`;
+            }
+            // p1.innerHTML = `<a href="#">${productTitle}</a>`;
+            let image = document.createElement("img");
+            image.src = `${productImg}`;
+            image.style.width = "100%";
+            image.style.height = "150px"
+            let p2 = document.createElement("p");
+            p2.innerHTML = `<a href="#">₹ ${price}</a>`;
+    
+            div.append(image,p1,p2);
+            // div.style.width = "120px";
+            div.setAttribute("class","zeal_box")
+            div.addEventListener("click",function(params){
+                let obj = {
+                    id:id, productTitle:productTitle, price:price, productImg:productImg, qty:qty,
+                }
+                localStorage.setItem("details_prod",JSON.stringify(obj));
+                window.location.href = "./apparel.html";
+            })
+            dav.append(div);
+        });
+
+    }
+
 
 </script>
+
+
