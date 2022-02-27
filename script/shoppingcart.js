@@ -8,13 +8,19 @@ if(items.length==0){
 displayitems(items);
 
 let totalamount = 0;
-total();
+total(items);
 
-function total() {
+function separator(numb) {
+    var str = numb.toString().split(".");
+    str[0] = str[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return str.join(".");
+}
+
+function total(items) {
     totalamount = items.reduce((sum, ele) => {
         return sum + (ele.qty * ele.price);
     }, 0);
-    document.querySelector("#totalamount").textContent = "₹ " + totalamount.toFixed(2) + "/-";
+    document.querySelector("#totalamount").textContent = "₹ " + separator(totalamount.toFixed(2)) + "/-";
 }
 
 
@@ -41,7 +47,7 @@ function displayitems(items) {
 
         let pricediv = document.createElement("div");
         let priceperpiece = document.createElement("p");
-        priceperpiece.textContent = price;
+        priceperpiece.textContent = separator(price);
 
         let qtydiv = document.createElement("div");
         qtydiv.setAttribute("class", "qtydiv");
@@ -60,10 +66,10 @@ function displayitems(items) {
                 return;
             }
             qtyinput.value--;
-            subtotal.textContent = "Subtotal : ₹ " + (qtyinput.value * price).toFixed(2);
+            subtotal.textContent = "Subtotal : ₹ " + separator((qtyinput.value * price).toFixed(2));
             items[index].qty = qtyinput.value;
             localStorage.setItem("alibabacart", JSON.stringify(items));
-            total();
+            total(items);
         }
 
         let incP = document.createElement("p");
@@ -72,10 +78,10 @@ function displayitems(items) {
         incdiv.append(incP);
         incdiv.onclick = () => {
             qtyinput.value++;
-            subtotal.textContent = "Subtotal : ₹ " + (qtyinput.value * price).toFixed(2);
+            subtotal.textContent = "Subtotal : ₹ " + separator((qtyinput.value * price).toFixed(2));
             items[index].qty = qtyinput.value;
             localStorage.setItem("alibabacart", JSON.stringify(items));
-            total();
+            total(items);
         }
 
         let qtyinput = document.createElement("input");
@@ -83,14 +89,14 @@ function displayitems(items) {
 
 
         let perprice = document.createElement("p");
-        perprice.textContent = `₹ ${price} (Per Piece)`;
+        perprice.textContent = `₹ ${separator(price)} (Per Piece)`;
 
         qtydiv.append(perprice, decdiv, qtyinput, incdiv);
 
 
 
         let subtotal = document.createElement("p");
-        subtotal.textContent = "Subtotal : ₹ " + (qtyinput.value * price).toFixed(2);
+        subtotal.textContent = "Subtotal : ₹ " + separator((qtyinput.value * price).toFixed(2));
 
         desdiv.append(removebtndiv, title, pricediv, qtydiv, subtotal);
 
@@ -103,6 +109,7 @@ function displayitems(items) {
             });
             localStorage.setItem("alibabacart", JSON.stringify(items));
             displayitems(items);
+            total(items);
         }
     });
 }
