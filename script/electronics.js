@@ -133,6 +133,12 @@ let electronicProduct = [
     }
 ];
 
+function separator(numb) {
+    var str = numb.toString().split(".");
+    str[0] = str[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    return str.join(".");
+}
+
 function displayProducts(data){
     document.querySelector("#electronic").innerHTML = null;
 
@@ -151,7 +157,7 @@ function displayProducts(data){
         product_title.textContent = productTitle;
 
         let product_price = document.createElement("p");
-        product_price.textContent = "₹ "+price;
+        product_price.textContent = "₹ "+separator(price);
 
         card.append(product_img,product_title,product_price);
         document.querySelector("#electronic").append(card);
@@ -160,7 +166,7 @@ function displayProducts(data){
 
 async function fetch_data(url) {
     try {
-        let response = await fetch(`http://localhost:4101/electronics/${url}`);
+        let response = await fetch(`https://alibaba-backend.herokuapp.com/electronics/${url}`);
         let data = await response.json();
         return data;
     }

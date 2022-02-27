@@ -1502,7 +1502,7 @@
 
     if (token) {
         setTimeout(async() => {
-            let response = await fetch(`http://localhost:4101/users/${token}`);
+            let response = await fetch(`https://alibaba-backend.herokuapp.com/users/${token}`);
             user = await response.json();
 
             document.querySelector("#navbar-signin-logo").innerHTML = `<i class="far fa-user fa-2x ">&nbsp</i>${user.firstName}`;

@@ -38,8 +38,8 @@
 }
 
 #multiImage>img {
-    width: 30%;
-    border: 1px solid black;
+    width: 20%;
+    border: 1px solid rgba(0, 0, 0, 0.452);
 
 }
 
