@@ -1,6 +1,6 @@
 let items = JSON.parse(localStorage.getItem("alibabacart"));
-
-if (!items) {
+console.log(items)
+if (!items || items.length==0) {
     alert("Your cart is empty");
     history.back();
 }
