@@ -12,7 +12,7 @@ body{
     margin: 0px;
     box-sizing: border-box;
     /* position:fixed; */
-    
+    padding-right: 10px;
     font-size: 12px;
 }
 #navbar > div {
@@ -46,7 +46,7 @@ body{
     margin: 0px;
     width: 100%;
     border: 1px solid transparent;
-    border-left: 1.5px solid rgb(255, 123, 0);
+    /* border-left: 1.5px solid rgb(255, 123, 0); */
 }
 #nav-b > div:nth-of-type(2) > input {
     padding: 6px;
@@ -63,8 +63,9 @@ body{
 }
 #nav-b > div:nth-of-type(2){
     flex-grow: 2;
-    border: 1px solid orange;
+    border-left: 1px solid orange;
 }
+
 #nav-b > div:nth-of-type(2) > input {
     width: 100%;
 }
@@ -78,31 +79,21 @@ body{
     padding:5px;
     position: relative;
     background-color:#fff;
-    border: 1px solid transparent;
+    border: 1px solid transparent;  
 }
 #nav-c div{
     padding-left: 2px;
 }
-#nav-d{
+#nav-d,#nav-e,#nav-f{
     height: 50%;
     margin: auto;
     border: 1px solid transparent;
     text-align: center;
     line-height: 0px;
+    margin-top: 8px;
 }
-#nav-e{
-    height: 50%;
-    margin: auto;
-    border: 1px solid transparent;
-    text-align: center;
-    line-height: 0px;
-}
-#nav-f{
-    height: 50%;
-    margin: auto;
-    border: 1px solid transparent;
-    text-align: center;
-    line-height: 0px;
+#nav-d:hover,#nav-e:hover,#nav-f:hover{
+    color: rgb(255, 123, 0);
 }
 .flag{
     display:none;
@@ -160,6 +151,7 @@ body{
     padding: 8px;
     border-bottom: 1px solid rgb(161, 160, 160);
     border-top: 1px solid rgb(161, 160, 160);
+    font-size: 15px;
 }
 #menu > div{
     /* border: 1px solid rgb(161, 160, 160); */
@@ -245,4 +237,36 @@ a{
 }
 .blogSlidenew{
     display: none;
+}
+#nav-f{
+    position: relative;
+}
+#cartCount{
+    position: absolute;
+    top: -18px;
+    right: -10px;
+    background-color: rgb(255, 123, 0);
+    padding: 8px 5px;
+    color: white;
+    font-weight: 700;
+    border-radius: 50%;
+    display: none;
+}
+
+#hi-user{
+    margin: 0px 15px 0px 5px;
+    text-transform: capitalize;
+    margin-top: 15px;
+}
+#signoutbtn{
+    height: 25px;
+    margin-top: 10px;
+    background-color: rgb(255, 123, 0);
+    color: white;
+    border: transparent;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+#signoutbtn:hover{
+    background-color: rgb(228, 110, 0);
 }

@@ -62,14 +62,19 @@
 <script src="./script/shoppingcart.js"></script>
 
 <script>
-    let alibabaauth = JSON.parse(localStorage.getItem("alibabaauth")) || {};
-    function submitorder() {
-        if (alibabaauth.signedin) {
+    let token = JSON.parse(localStorage.getItem("Authorization"));
+
+
+    async function submitorder() {
+        let response = await fetch(`https://alibaba-backend.herokuapp.com/users/${token}`);
+        user = await response.json();
+
+        if (user) {
             alert("Your order has been submitted, you will receive a call from the dealer soon.");
             localStorage.setItem("alibabacart", JSON.stringify([]));
             window.location.href = "./index.html";
         }
-        else if(alibabaauth.signedin===undefined) {
+        else {
             alert("You are not signed in");
             window.location.href = "./signin.html";
         }

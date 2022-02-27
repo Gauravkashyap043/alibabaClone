@@ -21,7 +21,7 @@ function navbar(){
         </div>
         <div id="nav-c" onmouseover="windOpen()" onmouseout="windClose()">
             <p><i class="fa fa-user-o fa-2x"></i></p>
-            <div>
+            <div id="navbar-signin-logo">
                 <p>Sign up <br> Sign in</p>
             </div>
 
@@ -49,8 +49,6 @@ function navbar(){
                 <h6>By Sliding to Continue with or Create My account , <br> I agree to<a href="index.html">alibaba.com Policy</a> </h6>
                 <h2 style="color: black;">My Alibaba</h2>
                 </div>
-
-
         </div>
         <div id="nav-d">
             <i class="far fa-envelope fa-2x"></i>
@@ -61,11 +59,8 @@ function navbar(){
             <p>orders</p>
         </div>
         <div id="nav-f" onclick = "window.location.href = './shoppingcart.html'">
-            <!-- <div>
-                <p style="z-index: 1;overflow-x: visible;position: relative;bottom: 0px;">x</p>
-                
-            </div> -->
-            <i class="fas fa-shopping-cart fa-2x"></i>
+        <p id="cartCount">x</p>
+        <i class="fas fa-shopping-cart fa-2x"></i>
             <p>cart</p>
         </div>
     </div>

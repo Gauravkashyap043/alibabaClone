@@ -108,30 +108,40 @@
 
 </script>
 <script>
-    let alibabauserdb = JSON.parse(localStorage.getItem("alibabauserdb")) || [];
-    let alibabaauth = JSON.parse(localStorage.getItem("alibabaauth"));
-    
-    if (alibabaauth != null) {
-        setTimeout(() => {
-            document.querySelector("#navbar-signin-logo").innerHTML = `<i class="far fa-user fa-2x ">&nbsp</i>${alibabaauth.name}`;
-            document.querySelector("#onblock").style.display = "none";
+    alibabacart = JSON.parse(localStorage.getItem("alibabacart")) || [];
+    let token = JSON.parse(localStorage.getItem("Authorization"));
+
+
+    function windOpen() {
+        if (token) return;
+        let x = document.getElementById("wind");
+        x.style.display = "block";
+    }
+    function windClose() {
+        if (token) return;
+        let x = document.getElementById("wind");
+        x.style.display = "none";
+    }
+
+    if (token) {
+        setTimeout(async () => {
+            let response = await fetch(`https://alibaba-backend.herokuapp.com/users/${token}`);
+            user = await response.json();
+
+            document.querySelector("#navbar-signin-logo").innerHTML = `<p id="hi-user">Hi, ${user.firstName}</p>`;
             let signout = document.createElement("button");
-            signout.onclick = ()=>{
-                localStorage.setItem("alibabaauth",JSON.stringify(null));
+            signout.onclick = () => {
+                localStorage.setItem("Authorization", null);
                 window.location.href = "./index.html";
             }
             signout.innerText = "Sign out";
-            signout.setAttribute("id","signoutbtn");
-            document.querySelector("#asign").append(signout);
-            //<button>Sign out</button>
+            signout.setAttribute("id", "signoutbtn");
+            document.querySelector("#nav-c").append(signout);
+
+            if (alibabacart.length > 0) {
+                document.querySelector("#cartCount").style.display = "block";
+                document.querySelector("#cartCount").textContent = alibabacart.length;
+            }
         }, 1000);
-    }
-    function windOpen() {
-       let x  = document.getElementById("wind");
-       x.style.display = "block";
-    }
-    function windClose() {
-       let x  = document.getElementById("wind");
-       x.style.display = "none";
     }
 </script>

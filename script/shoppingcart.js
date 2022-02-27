@@ -1,6 +1,6 @@
 let items = JSON.parse(localStorage.getItem("alibabacart"));
 
-if(items.length==0){
+if (!items) {
     alert("Your cart is empty");
     history.back();
 }
@@ -63,6 +63,10 @@ function displayitems(items) {
                 });
                 localStorage.setItem("alibabacart", JSON.stringify(items));
                 displayitems(items);
+                if (items.length==0) {
+                    alert("Your cart is empty");
+                    history.back();
+                }
                 return;
             }
             qtyinput.value--;
@@ -110,6 +114,10 @@ function displayitems(items) {
             localStorage.setItem("alibabacart", JSON.stringify(items));
             displayitems(items);
             total(items);
+            if (items.length==0) {
+                alert("Your cart is empty");
+                history.back();
+            }
         }
     });
 }
