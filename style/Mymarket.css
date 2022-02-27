@@ -127,14 +127,14 @@ body{
         grid-template-columns: repeat(4,23%);
         gap: 3%;
         width: 700px;
-        position: fixed;
+        position: absolute;
         /* overflow: hidden; */
         padding: 10px;
         font-size: 0.88em;
         /* top: 130px; */
-        top: 26vh;
+        top: 30vh;
         flex-flow: row-reverse;
-        z-index: 3;
+        z-index: 1;
         background-color: white;
         margin: 5px 5px 20px 240px;
         /* border: 1px solid red; */

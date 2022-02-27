@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="./style/fromnewarrivals.css">
     <link rel="stylesheet" href="./style/homepart.css">
     <link rel="stylesheet" href="./style/homepagefooter.css">
+    <script src="https://kit.fontawesome.com/a89380d960.js" crossorigin="anonymous"></script>
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 </head>
 <body>
     <section id="navsection"></section>
@@ -354,6 +356,15 @@ displayData(funda);
             dav.append(div);
         });
 
+    }
+
+    function windOpen() {
+       let x  = document.getElementById("wind");
+       x.style.display = "block";
+    }
+    function windClose() {
+       let x  = document.getElementById("wind");
+       x.style.display = "none";
     }
 
 
