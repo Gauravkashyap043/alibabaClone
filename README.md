@@ -6,7 +6,7 @@ CSS
 JAVASCRIPT
 LOCAL STORAGE
 
-#Features
+# Features
 Home page
 Login/Sign up page
 Payment page 
